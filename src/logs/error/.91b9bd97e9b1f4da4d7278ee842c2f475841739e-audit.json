@@ -1,0 +1,14 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "/Users/genemator/Developer/geneslantic/src/logs/error/.91b9bd97e9b1f4da4d7278ee842c2f475841739e-audit.json",
+    "files": [
+        {
+            "date": 1612270219237,
+            "name": "/Users/genemator/Developer/geneslantic/src/logs/error/2021-02-02.error.log",
+            "hash": "3f62904af15de519245ade6c22e3b92e"
+        }
+    ]
+}
