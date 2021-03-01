@@ -1,3 +1,4 @@
+import { server } from "../constants";
 import Meta from "../components/Meta";
 import Footer from "../components/Footer";
 
@@ -39,8 +40,8 @@ export default function Home({ posts }) {
   );
 }
 
-export async function getStaticProps() {
-  const res = await fetch("https://wt.genemator.me/api/posts");
+export async function getServerSideProps() {
+  const res = await fetch(server + "/api/posts");
   const posts = await res.json();
 
   return {
