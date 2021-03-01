@@ -105,3 +105,4 @@ dist
 
 # IDEA Files
 .idea
+.env
