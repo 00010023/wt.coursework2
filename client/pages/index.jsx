@@ -1,4 +1,4 @@
-import { server } from "../constants"
+import { server } from "../constants";
 import Meta from "../components/Meta";
 import Footer from "../components/Footer";
 

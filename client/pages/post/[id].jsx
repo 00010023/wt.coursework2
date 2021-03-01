@@ -1,6 +1,5 @@
-import { server } from "../../constants"
 import React from "react";
-import Link from "next/link";
+import { server } from "../../constants";
 import Meta from "../../components/Meta";
 import Footer from "../../components/Footer";
 
@@ -45,11 +44,11 @@ const Posts = ({ post }) => {
 };
 
 export async function getServerSideProps(context) {
-  const post = await fetch(
-      server + `/api/posts/${context.params.id}`
-  ).then(async (res) => {
-    return res.json();
-  });
+  const post = await fetch(server + `/api/posts/${context.params.id}`).then(
+    async (res) => {
+      return res.json();
+    }
+  );
 
   return {
     props: {

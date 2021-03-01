@@ -1,1 +1,1 @@
-export const server = "https://srv.genemator.me"
+export const server = "https://srv.genemator.me";
