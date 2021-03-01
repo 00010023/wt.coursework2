@@ -35,7 +35,7 @@ export const launch = async () => {
 
   // Define a simple route
   await app.get("/", async (req, res) => {
-    await res.redirect(env.WEBSITE);
+    await res.json({ message: "Hello World" });
   });
 
   await app.get("/source", async (req, res) => {
