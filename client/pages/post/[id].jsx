@@ -1,3 +1,4 @@
+import { server } from "../../constants"
 import React from "react";
 import Link from "next/link";
 import Meta from "../../components/Meta";
@@ -45,7 +46,7 @@ const Posts = ({ post }) => {
 
 export async function getServerSideProps(context) {
   const post = await fetch(
-    `https://wt.genemator.me/api/posts/${context.params.id}`
+      server + `/api/posts/${context.params.id}`
   ).then(async (res) => {
     return res.json();
   });
