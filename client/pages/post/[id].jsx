@@ -1,6 +1,7 @@
 import React from "react";
 import { server } from "../../constants";
 import Meta from "../../components/Meta";
+import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 const Posts = ({ post }) => {
@@ -27,7 +28,7 @@ const Posts = ({ post }) => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <Meta />
-
+      <Header />
       <main className="flex flex-col items-center justify-center flex-1 px-20 text-center">
         <h1 className="text-6xl font-bold pt-8">{post.title}</h1>
         <p className="mt-3 text-2xl">{publishDate()}</p>

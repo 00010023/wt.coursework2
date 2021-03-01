@@ -1,3 +1,5 @@
+import React from "react";
+import Link from "next/link";
 import { server } from "../constants";
 import Meta from "../components/Meta";
 import Footer from "../components/Footer";
@@ -22,15 +24,12 @@ export default function Home({ posts }) {
 
         <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full p-8">
           {posts.map((post) => (
-            <a
-              href={"/post/" + post._id}
-              className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-            >
-              <h3 className="text-2xl font-bold whitespace-nowrap">
-                {post.title} &rarr;
-              </h3>
-              <p className="mt-4 text-xl whitespace-nowrap">{post.snippet}</p>
-            </a>
+            <Link href={`/post/${post._id}`} key={post._id}>
+              <a className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600">
+                <h3 className="text-2xl font-bold">{post.title} &rarr;</h3>
+                <p className="mt-4 text-xl ">{post.snippet}</p>
+              </a>
+            </Link>
           ))}
         </div>
       </main>
