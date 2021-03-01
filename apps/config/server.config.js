@@ -10,5 +10,5 @@ import env from "./env.config.js";
 export default function () {
   if (env.HOST === "heroku") return env.PORT;
   else if (env.HOST === "test") return 3001;
-  else return 3000;
+  else return 3001;
 }

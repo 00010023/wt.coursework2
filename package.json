@@ -8,8 +8,8 @@
     "start": "node bin/www.js",
     "test": "node bin/test.js",
     "dev": "nodemon bin/www.js",
-    "format": "prettier --write --check \"**/*.js\"\n",
-    "format:check": "prettier --check \"**/*.js\"\n",
+    "format": "prettier --write --check \"**/*.js\" \"**/*.jsx\"\n",
+    "format:check": "prettier --check \"**/*.js\" \"**/*.jsx\"\n",
     "update": "yarn"
   },
   "engines": {
