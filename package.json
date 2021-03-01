@@ -37,9 +37,7 @@
     "is-reachable": "^4.0.0",
     "mongoose": "^5.7.5",
     "node-fetch": "^2.6.0",
-    "nprogress": "^0.2.0",
-    "prettier": "^2.1.1",
-    "telegraf": "^3.38.0"
+    "prettier": "^2.1.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
