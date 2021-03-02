@@ -9,8 +9,8 @@
     "server": "cd ./server && yarn dev",
     "client": "cd ./client && yarn dev",
     "docs": "cat readme.md",
-    "format": "prettier --write --check \"**/*.js\" \"**/*.jsx\" \"**/*.md\" \"**/*.css\"\n",
-    "format:check": "prettier --check \"**/*.js\" \"**/*.jsx\" \"**/*.md\"\n"
+    "format": "prettier --write --check \"**/*.js\" \"**/*.jsx\" \"**/*.md\" \"**/*.css\" \"**/*.vue\"\n",
+    "format:check": "prettier --check \"**/*.js\" \"**/*.jsx\" \"**/*.md\" \"**/*.css\" \"**/*.vue\"\n"
   },
   "dependencies": {
     "prettier": "^2.2.1"
