@@ -6,7 +6,8 @@ import Meta from "../components/Meta";
 import Footer from "../components/Footer";
 
 export default function Home({ posts }) {
-  const { data } = useSWR(server + '/posts', fetch, { initialData: posts })
+  const fetcher = url => fetch(url).then(res => res.json());
+  const { data } = useSWR(server + "/posts", fetcher, { initialData: posts });
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">

@@ -6,7 +6,8 @@ import Footer from "../../components/Footer";
 import useSWR from "swr";
 
 const Posts = ({ post }) => {
-  const { data } = useSWR(server + '/posts', fetch, { initialData: post })
+  const fetcher = url => fetch(url).then(res => res.json());
+  const { data } = useSWR(server + "/posts", fetcher, { initialData: post });
 
   const publishDate = () => {
     if (post.createdAt === post.updatedAt) {
