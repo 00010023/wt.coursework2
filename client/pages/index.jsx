@@ -40,7 +40,7 @@ export default function Home({ posts }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch(server + "/api/posts");
+  const res = await fetch(server + "/posts");
   const posts = await res.json();
 
   return {

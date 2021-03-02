@@ -45,7 +45,7 @@ const Posts = ({ post }) => {
 };
 
 export async function getServerSideProps(context) {
-  const post = await fetch(server + `/api/posts/${context.params.id}`).then(
+  const post = await fetch(server + `/posts/${context.params.id}`).then(
     async (res) => {
       return res.json();
     }
