@@ -13,17 +13,18 @@ const Notification = ({ news }) => {
           <div className="max-w-screen-xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
             <div className="pr-16 sm:text-center sm:px-16">
               <p className="font-medium text-black">
-                <span>
-                  <span className="font-bold">Warning:</span> {news}
-                </span>
-                <span className="block sm:ml-2 sm:inline-block">
-                  <a
-                    href="https://t.me/s/SeventyPlusBIS"
-                    className="text-black underline"
-                  >
-                    &rarr;
-                  </a>
-                </span>
+                <a
+                  href="https://t.me/s/SeventyPlusBIS"
+                  className="text-black cursor-help"
+                >
+                  <span>
+                    <span className="font-bold">Warning:</span>
+                    {news}
+                  </span>
+                  <span className="block sm:ml-2 sm:inline-block">
+                    <a className="text-black underline">&rarr;</a>
+                  </span>
+                </a>
               </p>
             </div>
           </div>

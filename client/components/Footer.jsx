@@ -12,7 +12,7 @@ const Footer = (props) => (
       <div className="flex justify-center text-center">
         <a
           href="https://github.com/00010023/wt.coursework2/blob/main/license"
-          className="hover:underline"
+          className="hover:underline cursor-fuck"
         >
           GNU General Public License v3.0 | Copyright © 2021 00010023
         </a>

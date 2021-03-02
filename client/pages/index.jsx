@@ -25,7 +25,7 @@ export default function Home({ posts }) {
       <Header subtitle="Home" />
       <Notification news="This blog app is dedicated to fulfill WIUT's requirements" />
       <div className="h-auto">
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center ">
           <svg viewBox="0 0 160 160" width="450" height="450">
             <circle cx="80" cy="80" r="50" />
             <g transform=" matrix(0.866, -0.5, 0.25, 0.433, 80, 80)">
@@ -62,7 +62,7 @@ export default function Home({ posts }) {
         </div>
         <div className="flex mb-4 justify-center">
           <div className="font-bold px-6 py-3 text-black text-center xl:text-6xl lg:text-5xl text-4xl border-4 rounded-lg">
-             @Gendy
+            @Gendy
           </div>
         </div>
         <div className="flex justify-center">

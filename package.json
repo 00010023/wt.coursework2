@@ -8,7 +8,7 @@
     "start": "node bin/www.js",
     "test": "yarn format:check",
     "dev": "nodemon bin/www.js",
-    "format": "prettier --write --check \"**/*.js\" \"**/*.jsx\" \"**/*.md\"\n",
+    "format": "prettier --write --check \"**/*.js\" \"**/*.jsx\" \"**/*.md\" \"**/*.css\"\n",
     "format:check": "prettier --check \"**/*.js\" \"**/*.jsx\" \"**/*.md\"\n",
     "update": "yarn"
   },
