@@ -5,8 +5,9 @@ import { server } from "../constants";
 import Meta from "../components/Meta";
 import Footer from "../components/Footer";
 
+const fetcher = (url) => fetch(url).then((res) => res.json());
+
 export default function Home({ posts }) {
-  const fetcher = url => fetch(url).then(res => res.json());
   const { data } = useSWR(server + "/posts", fetcher, { initialData: posts });
 
   return (
@@ -14,7 +15,7 @@ export default function Home({ posts }) {
       <Meta />
 
       <main className="flex flex-col items-center justify-center flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold pt-8">
+        <h1 className="text-6xl font-bold">
           Welcome to <a className="text-blue-600">Blog!</a>
         </h1>
 
@@ -26,7 +27,7 @@ export default function Home({ posts }) {
           's requirements
         </p>
 
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full p-8">
+        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
           {posts.map((post) => (
             <Link href={`/post/${post._id}`} key={post._id}>
               <a className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600">

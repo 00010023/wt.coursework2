@@ -1,13 +1,16 @@
+import useSWR from "swr";
 import React from "react";
 import { server } from "../../constants";
 import Meta from "../../components/Meta";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import useSWR from "swr";
+
+const fetcher = (url) => fetch(url).then((res) => res.json());
 
 const Posts = ({ post }) => {
-  const fetcher = url => fetch(url).then(res => res.json());
-  const { data } = useSWR(server + "/posts", fetcher, { initialData: post });
+  const { data, error } = useSWR(server + "/posts", fetcher, {
+    initialData: post,
+  });
 
   const publishDate = () => {
     if (post.createdAt === post.updatedAt) {
@@ -25,7 +28,7 @@ const Posts = ({ post }) => {
         day: "numeric",
         year: "numeric",
       });
-      return "Updated at " + format.format() + " by " + post.author;
+      return "Updated at " + format.format(date) + " by " + post.author;
     }
   };
 
