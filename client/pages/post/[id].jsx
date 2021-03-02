@@ -3,8 +3,11 @@ import { server } from "../../constants";
 import Meta from "../../components/Meta";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import useSWR from "swr";
 
 const Posts = ({ post }) => {
+  const { data } = useSWR(server + '/posts', fetch, { initialData: post })
+
   const publishDate = () => {
     if (post.createdAt === post.updatedAt) {
       const date = new Date(post.createdAt);

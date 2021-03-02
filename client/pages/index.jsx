@@ -1,10 +1,13 @@
 import React from "react";
 import Link from "next/link";
+import useSWR from "swr";
 import { server } from "../constants";
 import Meta from "../components/Meta";
 import Footer from "../components/Footer";
 
 export default function Home({ posts }) {
+  const { data } = useSWR(server + '/posts', fetch, { initialData: posts })
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <Meta />
