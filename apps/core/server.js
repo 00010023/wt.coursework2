@@ -11,6 +11,7 @@ import env from "../config/env.config.js";
 import bodyParser from "body-parser";
 import database from "../database/mongoose.js";
 import dbConfig from "../config/server.config.js";
+import packager from "../config/package.config.js";
 
 // Routes
 import postRoutes from "../../posts/routes.js";
@@ -38,13 +39,13 @@ export const launch = async () => {
     await res.json({ message: "Hello World" });
   });
 
+  await app.get("/github", async (req, res) => {
+    await res.redirect(
+      (await packager()).homepage.replace("github", "github1s")
+    );
+  });
+
   await app.get("/source", async (req, res) => {
-    const packager = async () => {
-      const file = await promises.readFile("./package.json", {
-        encoding: "utf-8",
-      });
-      return { ...(await JSON.parse(file)) };
-    };
     await res.redirect((await packager()).homepage);
   });
 
