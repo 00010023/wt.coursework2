@@ -12,7 +12,8 @@
     "format": "prettier --write --check \"**/*.js\" \"**/*.jsx\" \"**/*.md\" \"**/*.css\" \"**/*.vue\"\n",
     "format:check": "prettier --check \"**/*.js\" \"**/*.jsx\" \"**/*.md\" \"**/*.css\" \"**/*.vue\"\n",
     "git": "./update.sh",
-    "initialize": "./install.sh"
+    "initialize": "./install.sh",
+    "all": "./serverland.sh"
   },
   "dependencies": {
     "prettier": "^2.2.1"
