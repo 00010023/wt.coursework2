@@ -1,7 +1,7 @@
-const { title, description, repository } = require('../../package')
+const { title, description, repository } = require("../../package");
 
 module.exports = {
-  theme: 'yuu',
+  theme: "yuu",
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
@@ -17,9 +17,12 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
-    ['meta', { name: 'theme-color', content: '#000000' }],
-    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
+    ["meta", { name: "theme-color", content: "#000000" }],
+    ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
+    [
+      "meta",
+      { name: "apple-mobile-web-app-status-bar-style", content: "black" },
+    ],
   ],
 
   /**
@@ -30,55 +33,49 @@ module.exports = {
   themeConfig: {
     yuu: {
       defaultDarkTheme: true,
-      disableThemeIgnore: true
+      disableThemeIgnore: true,
     },
-    logo: 'https://genemator.me/favicon.png',
-    searchPlaceholder: 'Search...',
+    logo: "https://genemator.me/favicon.png",
+    searchPlaceholder: "Search...",
     smoothScroll: true,
     repo: repository,
-    repoLabel: 'Contribute!',
+    repoLabel: "Contribute!",
     editLinks: true,
-    docsDir: 'src',
-    docsRepo: 'genestatic/genedocs',
-    editLinkText: 'Contribute it!',
+    docsDir: "src",
+    docsRepo: "genestatic/genedocs",
+    editLinkText: "Contribute it!",
     lastUpdated: true,
     nav: [
       {
-        text: 'Home',
-        link: 'https://genemator.me'
+        text: "Home",
+        link: "https://genemator.me",
       },
       {
-        text: 'Assistant',
-        link: 'https://t.me/genemator_bot'
+        text: "Assistant",
+        link: "https://t.me/genemator_bot",
       },
       {
-        text: 'Guide',
-        link: '/guide/',
+        text: "Guide",
+        link: "/guide/",
       },
       {
-        text: 'Config',
-        link: '/config/'
-      }
+        text: "Config",
+        link: "/config/",
+      },
     ],
     sidebar: {
-      '/guide/': [
+      "/guide/": [
         {
-          title: 'Guide',
+          title: "Guide",
           collapsable: false,
-          children: [
-            '',
-            'using-vue',
-          ]
-        }
+          children: ["", "using-vue"],
+        },
       ],
-    }
+    },
   },
 
   /**
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
-  plugins: [
-    '@vuepress/plugin-back-to-top',
-    '@vuepress/plugin-medium-zoom',
-  ]
-}
+  plugins: ["@vuepress/plugin-back-to-top", "@vuepress/plugin-medium-zoom"],
+};

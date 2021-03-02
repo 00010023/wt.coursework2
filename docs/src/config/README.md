@@ -17,4 +17,3 @@ sidebar: auto
 - Default: `/`
 
 <demo-component/>
-

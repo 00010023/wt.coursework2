@@ -4,9 +4,8 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Head from "next/head";
 
-const server = process.env.SERVER
+const server = process.env.SERVER;
 const fetcher = (url) => fetch(url).then((res) => res.json());
-
 
 const Posts = ({ post }) => {
   const { data, error } = useSWR(server + "/posts", fetcher, {
