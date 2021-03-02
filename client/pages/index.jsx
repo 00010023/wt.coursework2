@@ -36,9 +36,7 @@ export default function Home({ posts }) {
           's requirements
         </p>
         <Link href={"/post"}>
-          <a className="mt-3 text-2xl border rounded-md p-3">
-            Browse
-          </a>
+          <a className="mt-3 text-2xl border rounded-md p-3">Browse</a>
         </Link>
       </main>
 
