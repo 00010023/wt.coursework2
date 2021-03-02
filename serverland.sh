@@ -1,6 +1,5 @@
 #!/bin/sh
-# shellcheck disable=SC2164
-cd "$(dirname "$0")"
+cd "$(dirname "$0")" || exit
 
 infos() {
   printf "Client has started in port 3000"
@@ -9,19 +8,19 @@ infos() {
 }
 
 client () {
-  cd ./client
+  cd ./client || exit
   yarn dev
   cd ..
 }
 
 server () {
-  cd ./server
+  cd ./server || exit
   yarn dev
   cd ..
 }
 
 docs () {
-  cd ./docs
+  cd ./docs || exit
   yarn dev
   cd ..
 }
