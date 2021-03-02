@@ -1,6 +1,6 @@
 #!/bin/sh
-# shellcheck disable=SC2164
-cd "$(dirname "$0")"
+cd "$(dirname "$0")" || exit
+cd ../
 cp -aRf ./client/. ../webtech/
 cd ../webtech
 git add .
