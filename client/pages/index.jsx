@@ -2,8 +2,8 @@ import React from "react";
 import Link from "next/link";
 import useSWR from "swr";
 import { server } from "../constants";
-import Meta from "../components/Meta";
 import Footer from "../components/Footer";
+import Head from "next/head";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -12,8 +12,11 @@ export default function Home({ posts }) {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <Meta />
-
+      <Head>
+        <title>Home | Serverland</title>
+        <meta property="og:title" content="Welcome to Serverland" />
+        <meta property="og:description" content="This website is dedicated to fulfill WIUT's requirements" />
+      </Head>
       <main className="flex flex-col items-center justify-center flex-1 px-20 text-center">
         <h1 className="text-6xl font-bold">
           Welcome to <a className="text-blue-600">Blog!</a>

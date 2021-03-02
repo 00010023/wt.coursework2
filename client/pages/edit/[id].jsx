@@ -35,9 +35,8 @@ const Posts = ({ post }) => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <Head>
-        <title>{post.title} | Serverland</title>
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.snippet} />
+        <title>Serverland</title>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
       <main className="flex flex-col items-center justify-center flex-1 px-20 text-center">
@@ -49,6 +48,7 @@ const Posts = ({ post }) => {
           </div>
         </div>
       </main>
+
       <Footer />
     </div>
   );
