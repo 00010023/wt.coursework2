@@ -62,7 +62,7 @@ export default function Home({ posts }) {
         </div>
         <div className="flex mb-4 justify-center">
           <div className="font-bold px-6 py-3 text-black text-center xl:text-6xl lg:text-5xl text-4xl border-4 rounded-lg">
-             @Gendy's
+             @Gendy
           </div>
         </div>
         <div className="flex justify-center">
