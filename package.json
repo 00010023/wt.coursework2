@@ -2,13 +2,13 @@
   "name": "wt.coursework2",
   "version": "1.0.0",
   "description": "The coursework of 00010023",
-  "main": "index.js",
   "repository": "https://genemators@github.com/00010023/wt.coursework2.git",
   "author": "Sokhibjon Orzikulov <sakhib.orzklv@icloud.com>",
   "license": "GPL-3.0",
-  "private": true,
   "scripts": {
-    "server": "cd ./server && yarn start",
+    "server": "cd ./server && yarn dev",
+    "client": "cd ./client && yarn dev",
+    "docs": "cat readme.md",
     "format": "prettier --write --check \"**/*.js\" \"**/*.jsx\" \"**/*.md\" \"**/*.css\"\n",
     "format:check": "prettier --check \"**/*.js\" \"**/*.jsx\" \"**/*.md\"\n"
   },
