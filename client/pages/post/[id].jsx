@@ -40,7 +40,7 @@ const Posts = ({ post }) => {
         <meta property="og:description" content={post.snippet} />
       </Head>
       <Header />
-      <main className="flex flex-col items-center justify-center flex-1 px-5 text-center">
+      <main className="flex flex-col items-center justify-center flex-1 px-2 text-center">
         <h1 className="text-6xl font-bold pt-8">{post.title}</h1>
         <p className="mt-3 text-2xl">{publishDate()}</p>
         <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full p-8">
