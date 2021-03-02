@@ -8,7 +8,7 @@
   "scripts": {
     "server": "cd ./server && yarn dev",
     "client": "cd ./client && yarn dev",
-    "docs": "cat readme.md",
+    "docs": "cd ./docs && yarn dev",
     "format": "prettier --write --check \"**/*.js\" \"**/*.jsx\" \"**/*.md\" \"**/*.css\" \"**/*.vue\"\n",
     "format:check": "prettier --check \"**/*.js\" \"**/*.jsx\" \"**/*.md\" \"**/*.css\" \"**/*.vue\"\n",
     "git": "./update.sh",
