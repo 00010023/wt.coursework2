@@ -11,7 +11,7 @@
     "docs": "cat readme.md",
     "format": "prettier --write --check \"**/*.js\" \"**/*.jsx\" \"**/*.md\" \"**/*.css\" \"**/*.vue\"\n",
     "format:check": "prettier --check \"**/*.js\" \"**/*.jsx\" \"**/*.md\" \"**/*.css\" \"**/*.vue\"\n",
-    "git": "./update.sh && exit 0"
+    "git": "./update.sh"
   },
   "dependencies": {
     "prettier": "^2.2.1"
