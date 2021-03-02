@@ -21,7 +21,7 @@ export default class GenoWebsiteApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     return (
-      <div>
+      <div className="h-screen">
         <Head>
           <meta
             property="og:image"

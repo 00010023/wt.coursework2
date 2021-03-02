@@ -8,13 +8,16 @@
     "start": "next start"
   },
   "dependencies": {
+    "@tailwindcss/ui": "^0.7.2",
     "autoprefixer": "^10.0.4",
     "next": "latest",
     "nprogress": "^0.2.0",
     "postcss": "^8.1.10",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-transition-group": "^4.4.1",
     "swr": "^0.4.2",
-    "tailwindcss": "^2.0.2"
+    "tailwindcss": "^2.0.2",
+    "tailwindcss-hyphens": "^0.1.0"
   }
 }

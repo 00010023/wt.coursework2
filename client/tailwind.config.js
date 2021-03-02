@@ -1,11 +1,33 @@
+const defaultTheme = require("tailwindcss/defaultTheme"); // eslint-disable-line
+
 module.exports = {
-  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
-  darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    fontFamily: {
+      mono: [
+        "Menlo",
+        "Monaco",
+        '"Lucida Console"',
+        "Consolas",
+        '"Liberation Mono"',
+        '"Courier New"',
+        "monospace",
+      ],
+    },
+    extend: {
+      fontFamily: {
+        sans: ["Inter var", ...defaultTheme.fontFamily.sans],
+      },
+      width: {
+        72: "18rem",
+      },
+    },
   },
   variants: {
-    extend: {},
+    backgroundColor: ["responsive", "hover", "focus", "active"],
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/ui"), require("tailwindcss-hyphens")],
+  purge: {
+    enabled: process.env.NODE_ENV === "production",
+    content: ["./components/**/*.jsx", "./pages/**/*.jsx"],
+  },
 };
