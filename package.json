@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "The coursework of 00010023",
   "repository": "https://genemators@github.com/00010023/wt.coursework2.git",
-  "author": "Sokhibjon Orzikulov <sakhib.orzklv@icloud.com>",
+  "author": "Geno Ferollo <sakhib.orzklv@icloud.com>",
   "license": "GPL-3.0",
   "scripts": {
     "server": "cd ./server && yarn dev",
