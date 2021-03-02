@@ -1,14 +1,14 @@
 import colors from "colors";
 import env from "../config/env.config.js";
 import mongoose from "mongoose";
-import dbConfig from "../config/database.config.js";
+import database from "../config/database.config.js";
 
 export default async () => {
   mongoose.Promise = global.Promise;
 
   // Connecting to the database
   await mongoose
-    .connect(await dbConfig(), {
+    .connect(await database(), {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useFindAndModify: false,
