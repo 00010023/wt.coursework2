@@ -5,7 +5,6 @@
 
 import http from "http";
 import express from "express";
-import { promises } from "fs";
 import enforce from "express-sslify";
 import env from "../config/env.config.js";
 import bodyParser from "body-parser";
@@ -36,7 +35,7 @@ export const launch = async () => {
 
   // Define a simple route
   await app.get("/", async (req, res) => {
-    await res.json({ message: "Hello World" });
+    await res.redirect("https://wt.genemator.me");
   });
 
   await app.get("/github", async (req, res) => {

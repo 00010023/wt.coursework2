@@ -1,5 +1,4 @@
 import colors from "colors";
-import env from "../config/env.config.js";
 import mongoose from "mongoose";
 import database from "../config/database.config.js";
 
