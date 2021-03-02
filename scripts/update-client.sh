@@ -6,4 +6,4 @@ cd ../webtech
 git add .
 git commit -m "Canvas Update"
 git push
-exit 1
+exit 0
