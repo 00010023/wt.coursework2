@@ -17,7 +17,7 @@ export const create = async (req, res) => {
   // Create a Post
   const post = new Post({
     title: req.body.title || "Untitled Post",
-    author: req.body.author || "Genemator Sakhib",
+    author: req.body.author || "Genemator",
     snippet: req.body.snippet || "No description provided...",
     content: req.body.content,
   });
@@ -85,7 +85,7 @@ export const update = async (req, res) => {
     req.params.postId,
     {
       title: req.body.title || "Untitled Post",
-      author: req.body.author || "Genemator Sakhib",
+      author: req.body.author || "Genemator",
       snippet: req.body.snippet || "No description provided...",
       content: req.body.content,
     },

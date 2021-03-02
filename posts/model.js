@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const PostSchema = mongoose.Schema(
   {
     title: String,
-    author: { type: String, default: "Genemator Sakhib" },
+    author: { type: String, default: "Genemator" },
     snippet: String,
     content: String,
   },
