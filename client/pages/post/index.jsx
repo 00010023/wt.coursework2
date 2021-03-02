@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import useSWR from "swr";
-import { server } from "../constants";
-import Footer from "../components/Footer";
+import { server } from "../../constants";
+import Footer from "../../components/Footer";
 import Head from "next/head";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
@@ -13,8 +13,8 @@ export default function Home({ posts }) {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <Head>
-        <title>Home | Serverland</title>
-        <meta property="og:title" content="Welcome to Serverland" />
+        <title>Posts | Serverland</title>
+        <meta property="og:title" content="Posts of Serverland" />
         <meta
           property="og:description"
           content="This website is dedicated to fulfill WIUT's requirements"
@@ -22,10 +22,7 @@ export default function Home({ posts }) {
       </Head>
       <main className="flex flex-col items-center justify-center flex-1 px-20 text-center">
         <h1 className="text-6xl font-bold">
-          Welcome to{" "}
-          <Link href={"/post"}>
-            <a className="text-blue-600"> My Blog!</a>
-          </Link>
+          My <a className="text-blue-600">Posts</a>!
         </h1>
 
         <p className="mt-3 text-2xl">
@@ -35,6 +32,25 @@ export default function Home({ posts }) {
           </code>
           's requirements
         </p>
+
+        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
+          {posts.map((post) => (
+            <Link href={`/post/${post._id}`} key={post._id}>
+              <a className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600">
+                <h3 className="text-2xl font-bold">{post.title} &rarr;</h3>
+                <p className="mt-4 text-xl ">{post.snippet}</p>
+              </a>
+            </Link>
+          ))}
+          {posts.map((post) => (
+            <Link href={`/post/${post._id}`} key={post._id}>
+              <a className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600">
+                <h3 className="text-2xl font-bold">{post.title} &rarr;</h3>
+                <p className="mt-4 text-xl ">{post.snippet}</p>
+              </a>
+            </Link>
+          ))}
+        </div>
       </main>
 
       <Footer />
