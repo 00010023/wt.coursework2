@@ -20,7 +20,7 @@ export default function Home({ posts }) {
           content="This website is dedicated to fulfill WIUT's requirements"
         />
       </Head>
-      <main className="flex flex-col items-center justify-center flex-1 px-20 text-center">
+      <main className="flex flex-col items-center justify-center flex-1 px-20 text-center mb-8">
         <h1 className="text-6xl font-bold">
           My <a className="text-blue-600">Posts</a>!
         </h1>
