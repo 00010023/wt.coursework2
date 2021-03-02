@@ -6,9 +6,9 @@
   "author": "Geno Ferollo <sakhib.orzklv@icloud.com>",
   "license": "GPL-3.0",
   "scripts": {
-    "server": "cd ./server && yarn dev",
-    "client": "cd ./client && yarn dev",
-    "docs": "cd ./docs && yarn dev",
+    "server": "./scripts/server.sh",
+    "client": "./scripts/client.sh",
+    "docs": "./scripts/docs.sh",
     "format": "prettier --write --check \"**/*.js\" \"**/*.jsx\" \"**/*.md\" \"**/*.css\" \"**/*.vue\"\n",
     "format:check": "prettier --check \"**/*.js\" \"**/*.jsx\" \"**/*.md\" \"**/*.css\" \"**/*.vue\"\n",
     "git": "./update.sh",
