@@ -2,7 +2,6 @@ import "dotenv/config.js";
 import colors from "colors";
 
 if (!process.env.HOST) {
-  dotenv.config();
   console.log(
     "Environmental variables has been loaded from .env file!".green.bold
   );

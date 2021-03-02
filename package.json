@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node bin/www.js",
-    "test": "node bin/test.js",
+    "test": "yarn format:check",
     "dev": "nodemon bin/www.js",
     "format": "prettier --write --check \"**/*.js\" \"**/*.jsx\" \"**/*.md\"\n",
     "format:check": "prettier --check \"**/*.js\" \"**/*.jsx\" \"**/*.md\"\n",
