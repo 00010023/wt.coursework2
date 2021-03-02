@@ -25,6 +25,8 @@ module.exports = {
     ],
   ],
 
+  port: 3002,
+
   /**
    * Theme configuration, here is the default theme configuration for VuePress.
    *
