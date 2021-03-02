@@ -1,10 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import useSWR from "swr";
-import { server } from "../../constants";
 import Footer from "../../components/Footer";
 import Head from "next/head";
 
+const server = process.env.SERVER
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Home({ posts }) {

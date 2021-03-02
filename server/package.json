@@ -1,5 +1,5 @@
 {
-  "name": "serverland",
+  "name": "serverland-server",
   "version": "3.5.0",
   "description": "Serverland - Genemator Server Manager.",
   "main": "bin/www.js",

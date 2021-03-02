@@ -35,7 +35,7 @@ export const launch = async () => {
 
   // Define a simple route
   await app.get("/", async (req, res) => {
-    await res.redirect("https://wt.genemator.me");
+    await res.redirect(process.env.WEBSITE);
   });
 
   await app.get("/github", async (req, res) => {
