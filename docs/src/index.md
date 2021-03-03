@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: https://genemator.me/big_logo.png
-tagline: The documentation website of Genemator's Website
+tagline: The documentation website of @Gendy Website
 actionText: Get Started →
 actionLink: /guide/
 features:
