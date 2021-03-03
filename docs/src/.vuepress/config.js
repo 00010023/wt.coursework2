@@ -2,20 +2,9 @@ const { title, description, repository } = require("../../package");
 
 module.exports = {
   theme: "yuu",
-  /**
-   * Ref：https://v1.vuepress.vuejs.org/config/#title
-   */
   title: title,
-  /**
-   * Ref：https://v1.vuepress.vuejs.org/config/#description
-   */
   description: description,
 
-  /**
-   * Extra tags to be injected to the page HTML `<head>`
-   *
-   * ref：https://v1.vuepress.vuejs.org/config/#head
-   */
   head: [
     ["meta", { name: "theme-color", content: "#000000" }],
     ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
@@ -24,14 +13,7 @@ module.exports = {
       { name: "apple-mobile-web-app-status-bar-style", content: "black" },
     ],
   ],
-
   port: 3002,
-
-  /**
-   * Theme configuration, here is the default theme configuration for VuePress.
-   *
-   * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
-   */
   themeConfig: {
     yuu: {
       defaultDarkTheme: true,
@@ -75,9 +57,5 @@ module.exports = {
       ],
     },
   },
-
-  /**
-   * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
-   */
   plugins: ["@vuepress/plugin-back-to-top", "@vuepress/plugin-medium-zoom"],
 };
