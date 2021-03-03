@@ -38,7 +38,11 @@ export const launch = async () => {
     await res.redirect(process.env.WEBSITE);
   });
 
-  await app.get("/github", async (req, res) => {
+  await app.get("/docs", async (req, res) => {
+    await res.redirect(process.env.DOCUMENTATION);
+  });
+
+  await app.get("/edit", async (req, res) => {
     await res.redirect(
       (await packager()).homepage.replace("github", "github1s")
     );

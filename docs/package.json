@@ -1,18 +1,14 @@
 {
-  "name": "genedocs",
-  "title": "Genemator's Docs",
+  "name": "serverland-docs",
+  "title": "@Gendy's Docs",
   "version": "0.1.0",
   "private": true,
-  "description": "The documentation website of Genemator's Website",
+  "description": "The documentation website of Gendy's Website",
   "main": "index.js",
-  "authors": {
-    "name": "Genemator Sakhib",
-    "email": "genemators@gmail.com"
-  },
   "author": "Geno Ferollo <sakhib.orzklv@icloud.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/genestatic/genedocs.git"
+    "url": "git+https://github.com/00010023/wt.coursework2.git"
   },
   "scripts": {
     "dev": "vuepress dev src",
@@ -27,9 +23,9 @@
     "vuepress-theme-yuu": "^2.3.0"
   },
   "bugs": {
-    "url": "https://github.com/genestatic/genedocs/issues"
+    "url": "https://github.com/00010023/wt.coursework2/issues"
   },
-  "homepage": "https://github.com/genestatic/genedocs#readme",
+  "homepage": "https://github.com/00010023/wt.coursework2#readme",
   "keywords": [
     "Genemator",
     "GeneDoc",
