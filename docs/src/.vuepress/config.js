@@ -32,11 +32,11 @@ module.exports = {
     nav: [
       {
         text: "Home",
-        link: "https://genemator.me",
+        link: "https://wt.genemator.me",
       },
       {
-        text: "Assistant",
-        link: "https://t.me/genemator_bot",
+        text: "About",
+        link: "/about/",
       },
       {
         text: "Guide",
@@ -45,6 +45,10 @@ module.exports = {
       {
         text: "Config",
         link: "/config/",
+      },
+      {
+        text: "Disclaimer",
+        link: "/disclaimer/",
       },
     ],
     sidebar: {

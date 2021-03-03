@@ -8,7 +8,7 @@ const server = process.env.SERVER;
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 const Posts = ({ post }) => {
-  const { data, error } = useSWR(server + "/posts", fetcher, {
+  const { data, error } = useSWR(server + "/api/v1/posts", fetcher, {
     initialData: post,
   });
 
@@ -55,7 +55,7 @@ const Posts = ({ post }) => {
 };
 
 export async function getServerSideProps(context) {
-  const post = await fetch(server + `/posts/${context.params.id}`).then(
+  const post = await fetch(server + `/api/v1/posts/${context.params.id}`).then(
     async (res) => {
       return res.json();
     }

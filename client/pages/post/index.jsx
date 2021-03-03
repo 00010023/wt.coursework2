@@ -8,7 +8,7 @@ const server = process.env.SERVER;
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Home({ posts }) {
-  const { data } = useSWR(server + "/posts", fetcher, { initialData: posts });
+  const { data } = useSWR(server + "/api/v1/posts", fetcher, { initialData: posts });
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
@@ -59,7 +59,7 @@ export default function Home({ posts }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch(server + "/posts");
+  const res = await fetch(server + "/api/v1/posts");
   const posts = await res.json();
 
   return {
