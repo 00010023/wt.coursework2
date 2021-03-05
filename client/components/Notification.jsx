@@ -14,7 +14,7 @@ const Notification = ({ news }) => {
             <div className="pr-16 sm:text-center sm:px-16">
               <p className="font-medium text-black">
                 <a
-                  href="https://t.me/s/SeventyPlusBIS"
+                  href="https://t.me/SeventyPlusBIS/230"
                   className="text-black cursor-help"
                 >
                   <span>
