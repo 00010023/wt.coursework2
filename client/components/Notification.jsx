@@ -1,11 +1,7 @@
-import { useRouter } from "next/router";
 import React from "react";
 import Link from "next/link";
-import Router from "next/router";
 
 const Notification = ({ news }) => {
-  const path = useRouter().pathname;
-
   const NewsPanel = (news) => {
     return (
       <div className="notification-area">
