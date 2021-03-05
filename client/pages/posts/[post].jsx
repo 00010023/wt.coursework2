@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Router from "next/router";
@@ -28,14 +28,15 @@ const NewsPostPage = ({ post, server }) => {
     body: null,
     redirect: "follow",
   };
-
+  const [deleteText, setDeleteText] = useState("Delete the post");
   const deletePost = () => {
+    setDeleteText("Hold on a second, processing...");
     fetch(server + "/api/v1/posts/" + post._id, options)
       .then((result) => console.log(result))
       .catch((error) => console.log("error", error));
     setTimeout(() => {
       Router.push("/posts");
-    }, 500);
+    }, 1000);
   };
 
   return (
@@ -69,7 +70,7 @@ const NewsPostPage = ({ post, server }) => {
         </a>
         <a onClick={deletePost}>
           <div className="mt-4 text-center border rounded bg-white text-black hover:text-white hover:bg-red-700 active:bg-red-400 select-none">
-            Delete the post
+            {deleteText}
           </div>
         </a>
       </div>
