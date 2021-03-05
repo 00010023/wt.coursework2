@@ -5,7 +5,7 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Notification from "../components/Notification";
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Head>
@@ -75,4 +75,6 @@ export default function Home() {
       <Footer />
     </>
   );
-}
+};
+
+export default Home;

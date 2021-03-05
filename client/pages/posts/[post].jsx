@@ -50,7 +50,6 @@ const NewsPostPage = ({ post, server }) => {
         <title>{post.title} | Genemator's</title>
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.snippet} />
-        <meta property="telegram" />
       </Head>
       <Header subtitle={post.title} />
       <div className="max-w-screen-md mx-auto px-4 sm:px-6 md:px-8 py-8 mb-16">
@@ -73,16 +72,18 @@ const NewsPostPage = ({ post, server }) => {
             baseURL={`${server}/api/v1/posts/${post._id}/md`}
           />
         </div>
-        <a href={"/edit/" + post._id}>
-          <div className="mt-4 text-center border rounded bg-white text-black hover:text-white hover:bg-black active:bg-gray-700 select-none">
-            Edit the post
-          </div>
-        </a>
-        <a onClick={deletePost}>
-          <div className="mt-4 text-center border rounded bg-white text-black hover:text-white hover:bg-red-700 active:bg-red-400 select-none">
-            {deleteText}
-          </div>
-        </a>
+        <div className="flex flex-wrap items-center justify-end text-center">
+          <a href={"/edit/" + post._id}>
+            <div className="mt-4 py-2 mx-5 px-2 border rounded bg-white text-black hover:text-white hover:bg-black active:bg-gray-700 select-none">
+              Edit the post
+            </div>
+          </a>
+          <a onClick={deletePost}>
+            <div className="mt-4 py-2 mx-5 px-2 border rounded bg-white text-black hover:text-white hover:bg-red-700 active:bg-red-400 select-none">
+              {deleteText}
+            </div>
+          </a>
+        </div>
       </div>
       <Footer />
     </>
