@@ -25,7 +25,7 @@ const Header = ({ subtitle, docsUrl }) => {
     if (path !== "/") {
       return (
         <Link href="/">
-          <a className="-m-3 p-3 flex items-center space-x-3 rounded-md text-black hover:bg-black hover:text-white transition ease-in-out duration-150">
+          <a className="-m-3 mt-3 p-3 flex items-center space-x-3 rounded-md text-black hover:bg-black hover:text-white transition ease-in-out duration-150">
             <svg
               className="flex-shrink-0 h-6 w-6"
               fill="none"
