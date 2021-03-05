@@ -62,13 +62,11 @@ const NewsPostPage = ({ post }) => {
         <div className="telegram-post mt-8">
           <Markdown source={post.content} />
         </div>
-        <Link href={"/edit/[post]"} as={`/edit/${post._id}`}>
-          <a>
+          <a href={"/" + post._id}>
             <div className="mt-4 text-center border rounded bg-white text-black hover:text-white hover:bg-black select-none">
               Edit the post
             </div>
           </a>
-        </Link>
         <a onClick={deletePost}>
           <div className="mt-4 text-center border rounded bg-white text-black hover:text-white hover:bg-red-700 select-none">
             Delete the post
