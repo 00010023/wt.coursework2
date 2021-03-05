@@ -4,6 +4,6 @@ cd ../
 cp -aRf ./client/. ../webtech/
 cd ../webtech || exit
 git add .
-git commit -m "Canvas Update"
+git commit -m "Updating..."
 git push
 exit 0
