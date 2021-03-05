@@ -3,6 +3,7 @@ import Head from "next/head";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Link from "next/link";
+import Notification from "../../components/Notification";
 
 const server = process.env.DATABASE;
 
@@ -18,6 +19,7 @@ const PostsIndexPage = ({ posts, documentation }) => {
         />
       </Head>
       <Header subtitle="Posts" docsUrl={documentation} />
+      <Notification news="This blog app is dedicated to fulfill WIUT's requirements" />
       <div className="pt-8 pb-20 px-4 sm:px-6 lg:pt-8 lg:pb-28 lg:px-8">
         <div className="max-w-screen-lg mx-auto">
           <div className="border-b-2 border-gray-800 pb-10">

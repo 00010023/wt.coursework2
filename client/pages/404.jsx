@@ -3,6 +3,7 @@ import React from "react";
 import Router from "next/router";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Notification from "../components/Notification";
 
 export default function Custom404({ documentation }) {
   return (
@@ -16,6 +17,7 @@ export default function Custom404({ documentation }) {
         />
       </Head>
       <Header subtitle="404" docsUrl={documentation} />
+      <Notification news="This blog app is dedicated to fulfill WIUT's requirements" />
       <div className="h-auto">
         <div className="flex mb-4 justify-center mt-64">
           <div className="text-black text-center text-center xl:text-6xl lg:text-5xl text-4xl border rounded hover:bg-black hover:text-white">

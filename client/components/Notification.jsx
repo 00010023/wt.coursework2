@@ -7,76 +7,31 @@ const Notification = ({ news }) => {
   const path = useRouter().pathname;
 
   const NewsPanel = (news) => {
-    if (path === "/") {
-      return (
-        <div className="notification-area">
-          <div className="max-w-screen-xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
-            <div className="pr-16 sm:text-center sm:px-16">
-              <p className="font-medium text-black">
-                <a
-                  href="https://t.me/SeventyPlusBIS/230"
-                  className="text-black cursor-help"
-                >
-                  <span>
-                    <span className="font-bold">Warning:</span>
-                    {news}
-                  </span>
-                  <span className="block sm:ml-2 sm:inline-block">
-                    <a className="text-black underline">&rarr;</a>
-                  </span>
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      );
-    }
-  };
-
-  const NavigationPanel = () => {
-    if (path !== "/") {
-      return (
-        <div className="bg-white">
-          <div className="max-w-screen-xl mx-auto py-3 px-3 sm:px-6 lg:px-8 text-black">
-            <a
-              onClick={() => Router.back()}
-              className="hover:text-gray-600 rounded cursor-pointer"
-            >
-              <svg
-                className="flex-shrink-0 h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+    return (
+      <div className="notification-area">
+        <div className="max-w-screen-xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
+          <div className="pr-16 sm:text-center sm:px-16">
+            <p className="font-medium text-black">
+              <a
+                href="https://t.me/SeventyPlusBIS/230"
+                className="text-black cursor-help"
               >
-                <line
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  x1="19"
-                  y1="12"
-                  x2="5"
-                  y2="12"
-                />
-                <polyline
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  points="12 19 5 12 12 5"
-                />
-              </svg>
-            </a>
+                <span>
+                  <span className="font-bold">Warning:</span>
+                  {news}
+                </span>
+                <span className="block sm:ml-2 sm:inline-block">
+                  <a className="text-black underline">&rarr;</a>
+                </span>
+              </a>
+            </p>
           </div>
         </div>
-      );
-    }
+      </div>
+    );
   };
 
-  return (
-    <>
-      {NewsPanel(news)}
-      {NavigationPanel()}
-    </>
-  );
+  return <>{NewsPanel(news)}</>;
 };
 
 export default Notification;

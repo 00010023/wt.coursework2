@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Markdown from "../components/Markdown";
+import Notification from "../components/Notification";
 
 const NewPostPage = ({ server, documentation }) => {
   const [isProcessing, setProcess] = useState(false);
@@ -82,6 +83,7 @@ const NewPostPage = ({ server, documentation }) => {
         />
       </Head>
       <Header subtitle="Create a post" docsUrl={documentation} />
+      <Notification news="This blog app is dedicated to fulfill WIUT's requirements" />
       <div className="max-w-screen-md mx-auto px-4 sm:px-6 md:px-8 py-8 mb-16">
         <Link href="/posts">
           <a className="link">&lt;- Back to overview</a>
