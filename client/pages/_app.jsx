@@ -1,6 +1,7 @@
 import App from "next/app";
 import React from "react";
 import "../styles/globals.css";
+import "../styles/markdown.css";
 import "../styles/ngprogress.css";
 import Router from "next/router";
 import NProgress from "nprogress";

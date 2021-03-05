@@ -7,6 +7,7 @@ const Header = ({ subtitle }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const path = useRouter().pathname;
+  const documentation = process.env.DOCUMENTATION;
 
   const homeDetectMenu = () => {
     if (path !== "/") {
@@ -84,7 +85,7 @@ const Header = ({ subtitle }) => {
           </div>
           <nav className="hidden md:flex space-x-10">
             {homeDetectMenu()}
-            <Link href="/post">
+            <Link href="/posts">
               <a className="text-base leading-6 font-medium text-black hover:text-gray-700 focus:outline-none focus:text-gray-400 transition ease-in-out duration-150">
                 Posts
               </a>
@@ -92,11 +93,24 @@ const Header = ({ subtitle }) => {
           </nav>
           <div className="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
             <a
-              href={"https://genemator.me/"}
+              href={documentation}
               target="_blank"
               className="whitespace-no-wrap text-base leading-6 font-medium genemator-title text-black hover:text-gray-700 focus:outline-none focus:text-gray-400"
             >
-              G
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                />
+              </svg>
             </a>
           </div>
         </div>
@@ -148,7 +162,7 @@ const Header = ({ subtitle }) => {
                 <div>
                   <nav className="grid row-gap-8">
                     {homeDetectResponsive()}
-                    <Link href="/post">
+                    <Link href="/posts">
                       <a className="-m-3 p-3 flex items-center space-x-3 rounded-md text-black hover:bg-black hover:text-white transition ease-in-out duration-150">
                         <svg
                           className="flex-shrink-0 h-6 w-6"
@@ -174,10 +188,10 @@ const Header = ({ subtitle }) => {
               <div className="py-6 px-5 space-y-6">
                 <div className="space-y-6">
                   <a
-                    href={"https://genemator.me/"}
+                    href="https://doc.genemator.me"
                     className="w-full flex items-center justify-center px-4 py-2 border border text-base leading-6 font-medium rounded-md text-black genemator-title bg-transparent hover:bg-black hover:text-white focus:outline-none focus:border-white focus:shadow-outline-white active:bg-white transition ease-in-out duration-150"
                   >
-                    Genemator's
+                    @Gendy Docs
                   </a>
                   <span className="w-full flex rounded-md shadow-sm" />
                   <p className="text-center text-base leading-6 font-medium text-black">
