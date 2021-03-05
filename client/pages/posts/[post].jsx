@@ -64,7 +64,7 @@ const NewsPostPage = ({ post, server }) => {
           {format.format(date)}
         </p>
         <p className="text-gray-600 mt-3 leading-tight">{post.author}</p>
-        <div className="telegram-post mt-8">
+        <div className="mt-8">
           <Markdown
             source={post.content}
             displayURL={`${server}/api/v1/posts/${post._id}/md`}
@@ -72,17 +72,26 @@ const NewsPostPage = ({ post, server }) => {
             baseURL={`${server}/api/v1/posts/${post._id}/md`}
           />
         </div>
-        <div className="flex flex-wrap items-center justify-end text-center">
-          <a href={"/edit/" + post._id}>
-            <div className="mt-4 py-2 mx-5 px-2 border rounded bg-white text-black hover:text-white hover:bg-black active:bg-gray-700 select-none">
-              Edit the post
-            </div>
-          </a>
-          <a onClick={deletePost}>
-            <div className="mt-4 py-2 mx-5 px-2 border rounded bg-white text-black hover:text-white hover:bg-red-700 active:bg-red-400 select-none">
-              {deleteText}
-            </div>
-          </a>
+        <div className="items-center justify-center text-center">
+          <div className="grid lg:grid-cols-3 lg:col-gap-5 lg:row-gap-12">
+            <a href={"/edit/" + post._id}>
+              <div className="mt-4 py-2 mx-1 px-2 border rounded bg-white text-black hover:text-white hover:bg-black active:bg-gray-700 select-none">
+                Edit the post
+              </div>
+            </a>
+            <a onClick={deletePost}>
+              <div className="mt-4 py-2 mx-1 px-2 border rounded bg-white text-black hover:text-white hover:bg-red-700 active:bg-red-400 select-none">
+                {deleteText}
+              </div>
+            </a>
+            <Link href="/new">
+              <a>
+                <div className="mt-4 py-2 mx-1 px-2 border rounded bg-white text-black hover:text-white hover:bg-green-700 active:bg-green-400 select-none">
+                  Create another
+                </div>
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
       <Footer />

@@ -70,6 +70,11 @@ const Home = () => {
               Browse Posties
             </div>
           </Link>
+          <Link href={"/new"}>
+            <div className="bg-black text-white text-center xl:text-3xl lg:text-2xl text-1xl border rounded hover:text-black hover:bg-white cursor-pointer m-2 px-2 py-2">
+              Create Post
+            </div>
+          </Link>
         </div>
       </div>
       <Footer />

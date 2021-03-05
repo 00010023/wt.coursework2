@@ -7,7 +7,7 @@ const Header = ({ subtitle }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const path = useRouter().pathname;
-  const documentation = process.env.DOCUMENTATION;
+  const documentation = "https://doc.genemator.me";
 
   const homeDetectMenu = () => {
     if (path !== "/") {
