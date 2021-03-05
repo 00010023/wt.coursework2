@@ -16,10 +16,11 @@
     "next": "latest",
     "nprogress": "^0.2.0",
     "postcss": "^8.1.10",
+    "prism-react-renderer": "^1.2.0",
+    "prismjs": "^1.23.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-transition-group": "^4.4.1",
-    "swr": "^0.4.2",
     "tailwindcss": "^2.0.2",
     "tailwindcss-hyphens": "^0.1.0"
   }

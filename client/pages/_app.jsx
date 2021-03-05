@@ -18,7 +18,7 @@ Router.events.on("routeChangeComplete", () => {
 });
 Router.events.on("routeChangeError", () => NProgress.done());
 
-export default class GenoWebsiteApp extends App {
+export default class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     return (

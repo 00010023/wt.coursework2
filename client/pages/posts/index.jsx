@@ -3,16 +3,10 @@ import Head from "next/head";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Link from "next/link";
-import useSWR from "swr";
 
-const server = process.env.SERVER
-const fetcher = (url) => fetch(url).then((res) => res.json());
+const server = process.env.DATABASE;
 
-const PostsIndexPage = (props) => {
-  const { data } = useSWR(server + "/api/v1/posts", fetcher, {
-    initialData: props.posts,
-  });
-
+const PostsIndexPage = ({ posts }) => {
   return (
     <>
       <Head>
@@ -38,7 +32,7 @@ const PostsIndexPage = (props) => {
             </div>
           </div>
           <div className="mt-6 grid gap-16 lg:grid-cols-2 lg:col-gap-5 lg:row-gap-12">
-            {props.posts.map((post) => {
+            {posts.map((post) => {
               const date = new Date(post.createdAt);
               const format = new Intl.DateTimeFormat(undefined, {
                 month: "long",
@@ -46,11 +40,9 @@ const PostsIndexPage = (props) => {
                 year: "numeric",
               });
               return (
-                <div key={post.id}>
+                <div key={post._id}>
                   <p className="text-sm leading-5 text-gray-700">
-                    <time dateTime={post.createdAt}>
-                      {format.format(date)}
-                    </time>
+                    <time dateTime={post.createdAt}>{format.format(date)}</time>
                   </p>
                   <Link href={"/posts/[post]"} as={`/posts/${post._id}`}>
                     <a className="block">
@@ -81,14 +73,14 @@ const PostsIndexPage = (props) => {
 };
 
 export const getServerSideProps = async () => {
-    const res = await fetch(server + "/api/v1/posts");
-    const posts = await res.json();
+  const res = await fetch(server + "/api/v1/posts/");
+  const posts = await res.json();
 
-    return {
-        props: {
-            posts,
-        },
-    };
+  return {
+    props: {
+      posts,
+    },
+  };
 };
 
 export default PostsIndexPage;

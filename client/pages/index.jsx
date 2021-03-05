@@ -1,17 +1,11 @@
 import React from "react";
 import Link from "next/link";
-import useSWR from "swr";
 import Footer from "../components/Footer";
 import Head from "next/head";
 import Header from "../components/Header";
 import Notification from "../components/Notification";
 
-const server = process.env.SERVER;
-const fetcher = (url) => fetch(url).then((res) => res.json());
-
-export default function Home({ posts }) {
-  const { data } = useSWR(server + "/posts", fetcher, { initialData: posts });
-
+export default function Home() {
   return (
     <>
       <Head>
@@ -81,15 +75,4 @@ export default function Home({ posts }) {
       <Footer />
     </>
   );
-}
-
-export async function getServerSideProps() {
-  const res = await fetch(server + "/posts");
-  const posts = await res.json();
-
-  return {
-    props: {
-      posts,
-    },
-  };
 }

@@ -3,6 +3,7 @@
  * The main server where everything will be initialized
  */
 
+import cors from "cors";
 import http from "http";
 import express from "express";
 import enforce from "express-sslify";
@@ -26,6 +27,9 @@ export const launch = async () => {
 
   // Parse apps/x-www.js-form-urlencoded
   await app.use(bodyParser.urlencoded({ extended: true }));
+
+  // Cors
+  await app.use(cors());
 
   // Parse apps/json
   await app.use(bodyParser.json());
