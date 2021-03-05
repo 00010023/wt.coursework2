@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const server = process.env.DATABASE;
 
-const NewsPostPage = ({ post }) => {
+const NewsPostPage = ({ post, server }) => {
   const router = useRouter();
   const published = () => {
     if (post.createdAt === post.updatedAt) return post.createdAt;
@@ -32,8 +32,8 @@ const NewsPostPage = ({ post }) => {
   };
 
   const checkPost = () => {
-    console.log(server + "/api/v1/posts/" + post._id)
-  }
+    console.log(server + "/api/v1/posts/" + post._id);
+  };
 
   const deletePost = () => {
     fetch(server + "/api/v1/posts/" + post._id, options)
@@ -66,11 +66,11 @@ const NewsPostPage = ({ post }) => {
         <div className="telegram-post mt-8">
           <Markdown source={post.content} />
         </div>
-          <a href={"/" + post._id}>
-            <div className="mt-4 text-center border rounded bg-white text-black hover:text-white hover:bg-black select-none">
-              Edit the post
-            </div>
-          </a>
+        <a href={"/" + post._id}>
+          <div className="mt-4 text-center border rounded bg-white text-black hover:text-white hover:bg-black select-none">
+            Edit the post
+          </div>
+        </a>
         <a onClick={deletePost}>
           <div className="mt-4 text-center border rounded bg-white text-black hover:text-white hover:bg-red-700 select-none">
             Delete the post
@@ -97,6 +97,7 @@ export async function getServerSideProps(context) {
   return {
     props: {
       post,
+      server,
     },
   };
 }
