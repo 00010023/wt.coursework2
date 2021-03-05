@@ -61,7 +61,12 @@ const NewsPostPage = ({ post, server }) => {
         </p>
         <p className="text-gray-600 mt-3 leading-tight">{post.author}</p>
         <div className="telegram-post mt-8">
-          <Markdown source={post.content} />
+          <Markdown
+            source={post.content}
+            displayURL={`${server}/api/v1/posts/${props.meta.id}/md`}
+            sourceURL={`${server}/api/v1/posts/${props.meta.id}/md`}
+            baseURL={`${server}/api/v1/posts/${props.meta.id}/md`}
+          />
         </div>
         <a href={"/edit/" + post._id}>
           <div className="mt-4 text-center border rounded bg-white text-black hover:text-white hover:bg-black active:bg-gray-700 select-none">

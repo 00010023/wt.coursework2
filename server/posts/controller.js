@@ -71,6 +71,28 @@ export const findOne = async (req, res) => {
     });
 };
 
+export const findOneMD = async (req, res) => {
+  await Post.findById(req.params.postId)
+    .then((post) => {
+      if (!post) {
+        return res.status(404).send({
+          message: "Content not found with id " + req.params.postId,
+        });
+      }
+      res.send(post.content);
+    })
+    .catch((err) => {
+      if (err.kind === "ObjectId") {
+        return res.status(404).send({
+          message: "Post not found with id " + req.params.postId,
+        });
+      }
+      return res.status(500).send({
+        message: "Error retrieving post with id " + req.params.postId,
+      });
+    });
+};
+
 // Update a post identified by the postId in the request
 export const update = async (req, res) => {
   // Validate Request

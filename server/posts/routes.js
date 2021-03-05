@@ -10,6 +10,9 @@ export default async function (app) {
   // Retrieve a single Post with postId
   await app.get("/api/v1/posts/:postId", await posts.findOne);
 
+  // Retrieve a single Post with postId
+  await app.get("/api/v1/posts/:postId/md", await posts.findOneMD);
+
   // Update a Post with postId
   await app.put("/api/v1/posts/:postId", await posts.update);
 
