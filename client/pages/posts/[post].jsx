@@ -66,12 +66,12 @@ const NewsPostPage = ({ post, server }) => {
           <Markdown source={data.content} />
         </div>
         <a href={"/edit/" + data._id}>
-          <div className="mt-4 text-center border rounded bg-white text-black hover:text-white hover:bg-black select-none">
+          <div className="mt-4 text-center border rounded bg-white text-black hover:text-white hover:bg-black active:bg-gray-700 select-none">
             Edit the post
           </div>
         </a>
         <a onClick={deletePost}>
-          <div className="mt-4 text-center border rounded bg-white text-black hover:text-white hover:bg-red-700 select-none">
+          <div className="mt-4 text-center border rounded bg-white text-black hover:text-white hover:bg-red-700 active:bg-red-400 select-none">
             Delete the post
           </div>
         </a>
