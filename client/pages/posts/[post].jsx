@@ -35,7 +35,7 @@ const NewsPostPage = ({ post, server }) => {
       .then((result) =>
         setTimeout(() => {
           Router.push("/posts");
-        }, 1000)
+        }, 500)
       )
       .catch((error) =>
         setTimeout(() => {
