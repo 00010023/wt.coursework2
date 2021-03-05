@@ -1,4 +1,3 @@
-import useSWR from "swr";
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -10,13 +9,9 @@ import Markdown from "../../components/Markdown";
 const server = process.env.DATABASE;
 
 const NewsPostPage = ({ post, server }) => {
-  const fetcher = (...args) => fetch(...args).then((res) => res.json());
-  const { data } = useSWR(server + "/api/v1/posts/", fetcher, {
-    initialData: post,
-  });
   const published = () => {
-    if (data.createdAt === data.updatedAt) return data.createdAt;
-    if (data.createdAt !== data.updatedAt) return data.updatedAt;
+    if (post.createdAt === post.updatedAt) return post.createdAt;
+    if (post.createdAt !== post.updatedAt) return post.updatedAt;
   };
   const date = new Date(published());
   const format = new Intl.DateTimeFormat(undefined, {
@@ -35,37 +30,39 @@ const NewsPostPage = ({ post, server }) => {
   };
 
   const deletePost = () => {
-    fetch(server + "/api/v1/posts/" + data._id, options)
+    fetch(server + "/api/v1/posts/" + post._id, options)
       .then((result) => console.log(result))
       .catch((error) => console.log("error", error));
-    setTimeout(() => {Router.push("/posts")}, 500);
+    setTimeout(() => {
+      Router.push("/posts");
+    }, 500);
   };
 
   return (
     <>
       <Head>
-        <title>{data.title} | Genemator's</title>
-        <meta property="og:title" content={data.title} />
-        <meta property="og:description" content={data.snippet} />
+        <title>{post.title} | Genemator's</title>
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.snippet} />
         <meta property="telegram" />
       </Head>
-      <Header subtitle={data.title} />
+      <Header subtitle={post.title} />
       <div className="max-w-screen-md mx-auto px-4 sm:px-6 md:px-8 py-8 mb-16">
         <Link href="/posts">
           <a className="link">&lt;- Back to overview</a>
         </Link>
 
         <h1 className="tracking-tight font-bold text-5xl leading-10 mt-4 py-8">
-          {data.title}
+          {post.title}
         </h1>
         <p className="text-gray-600 mt-3 leading-tight">
           {format.format(date)}
         </p>
-        <p className="text-gray-600 mt-3 leading-tight">{data.author}</p>
+        <p className="text-gray-600 mt-3 leading-tight">{post.author}</p>
         <div className="telegram-post mt-8">
-          <Markdown source={data.content} />
+          <Markdown source={post.content} />
         </div>
-        <a href={"/edit/" + data._id}>
+        <a href={"/edit/" + post._id}>
           <div className="mt-4 text-center border rounded bg-white text-black hover:text-white hover:bg-black active:bg-gray-700 select-none">
             Edit the post
           </div>
