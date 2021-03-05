@@ -65,7 +65,6 @@ const NewsPostPage = ({ post, server }) => {
             source={post.content}
             displayURL={`${server}/api/v1/posts/${props.meta.id}/md`}
             sourceURL={`${server}/api/v1/posts/${props.meta.id}/md`}
-            baseURL={`${server}/api/v1/posts/${props.meta.id}/md`}
           />
         </div>
         <a href={"/edit/" + post._id}>
