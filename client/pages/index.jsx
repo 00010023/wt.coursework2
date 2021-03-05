@@ -65,7 +65,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex wrap mb-4 mt-4 justify-center mb-32">
-          <Link href={"/posts"} as="/wtf">
+          <Link href={"/posts"}>
             <div className="bg-black text-white text-center xl:text-3xl lg:text-2xl text-1xl border rounded hover:text-black hover:bg-white cursor-pointer m-2 px-2 py-2">
               Browse Posties
             </div>
