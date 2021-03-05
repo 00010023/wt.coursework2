@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Markdown from "../components/Markdown";
 
-const NewPostPage = () => {
+const NewPostPage = ({ server }) => {
   const [isProcessing, setProcess] = useState(false);
   const [postTitle, setPostTitle] = useState("");
   const [postDescription, setPostDescription] = useState("");
@@ -47,7 +47,7 @@ const NewPostPage = () => {
         setCreateText("Create Post");
       } else {
         setProcess(true);
-        fetch("http://localhost:3001/api/v1/posts", {
+        fetch(server + "/api/v1/posts", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(raw),
@@ -168,5 +168,15 @@ const NewPostPage = () => {
     </>
   );
 };
+
+export async function getStaticProps() {
+  const server = process.env.DATABASE
+
+  return {
+    props: {
+      server,
+    },
+  };
+}
 
 export default NewPostPage;
