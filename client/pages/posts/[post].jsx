@@ -2,7 +2,7 @@ import useSWR from "swr";
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import Router from "next/router";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Markdown from "../../components/Markdown";
@@ -14,7 +14,6 @@ const NewsPostPage = ({ post, server }) => {
   const { data } = useSWR(server + "/api/v1/posts/", fetcher, {
     initialData: post,
   });
-  const router = useRouter();
   const published = () => {
     if (data.createdAt === data.updatedAt) return data.createdAt;
     if (data.createdAt !== data.updatedAt) return data.updatedAt;
@@ -35,15 +34,11 @@ const NewsPostPage = ({ post, server }) => {
     redirect: "follow",
   };
 
-  const checkPost = () => {
-    console.log(server + "/api/v1/posts/" + data._id);
-  };
-
   const deletePost = () => {
     fetch(server + "/api/v1/posts/" + data._id, options)
       .then((result) => console.log(result))
       .catch((error) => console.log("error", error));
-    router.push("/posts");
+    setTimeout(() => {Router.push("/posts")}, 500);
   };
 
   return (
@@ -70,7 +65,7 @@ const NewsPostPage = ({ post, server }) => {
         <div className="telegram-post mt-8">
           <Markdown source={data.content} />
         </div>
-        <a href={"/" + data._id}>
+        <a href={"/edit/" + data._id}>
           <div className="mt-4 text-center border rounded bg-white text-black hover:text-white hover:bg-black select-none">
             Edit the post
           </div>
@@ -78,11 +73,6 @@ const NewsPostPage = ({ post, server }) => {
         <a onClick={deletePost}>
           <div className="mt-4 text-center border rounded bg-white text-black hover:text-white hover:bg-red-700 select-none">
             Delete the post
-          </div>
-        </a>
-        <a onClick={checkPost}>
-          <div className="mt-4 text-center border rounded bg-white text-black hover:text-white hover:bg-yellow-300 select-none">
-            Check the post
           </div>
         </a>
       </div>
