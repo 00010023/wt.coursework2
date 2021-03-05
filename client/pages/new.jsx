@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Markdown from "../components/Markdown";
 
-const NewPostPage = ({ server }) => {
+const NewPostPage = ({ server, documentation }) => {
   const [isProcessing, setProcess] = useState(false);
   const [postTitle, setPostTitle] = useState("");
   const [postDescription, setPostDescription] = useState("");
@@ -81,7 +81,7 @@ const NewPostPage = ({ server }) => {
           content="Creating a post in Gendy's Blog"
         />
       </Head>
-      <Header subtitle="Create a post" />
+      <Header subtitle="Create a post" docsUrl={documentation} />
       <div className="max-w-screen-md mx-auto px-4 sm:px-6 md:px-8 py-8 mb-16">
         <Link href="/posts">
           <a className="link">&lt;- Back to overview</a>
@@ -170,11 +170,12 @@ const NewPostPage = ({ server }) => {
 };
 
 export async function getStaticProps() {
-  const server = process.env.DATABASE
-
+  const server = process.env.DATABASE;
+  const documentation = process.env.DOCUMENTATION;
   return {
     props: {
       server,
+      documentation,
     },
   };
 }

@@ -5,7 +5,7 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Notification from "../components/Notification";
 
-const Home = () => {
+const Home = ({ documentation }) => {
   return (
     <>
       <Head>
@@ -16,7 +16,7 @@ const Home = () => {
           content="This website is dedicated to fulfill WIUT's requirements"
         />
       </Head>
-      <Header subtitle="Home" />
+      <Header subtitle="Home" docsUrl={documentation} />
       <Notification news="This blog app is dedicated to fulfill WIUT's requirements" />
       <div className="h-auto">
         <div className="flex justify-center items-center ">
@@ -81,5 +81,14 @@ const Home = () => {
     </>
   );
 };
+
+export async function getStaticProps() {
+  const documentation = process.env.DOCUMENTATION;
+  return {
+    props: {
+      documentation,
+    },
+  };
+}
 
 export default Home;

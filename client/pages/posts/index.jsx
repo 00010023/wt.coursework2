@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const server = process.env.DATABASE;
 
-const PostsIndexPage = ({ posts }) => {
+const PostsIndexPage = ({ posts, documentation }) => {
   return (
     <>
       <Head>
@@ -17,7 +17,7 @@ const PostsIndexPage = ({ posts }) => {
           content="At this page you can list existing posts in our website!"
         />
       </Head>
-      <Header subtitle="Posts" />
+      <Header subtitle="Posts" docsUrl={documentation} />
       <div className="pt-8 pb-20 px-4 sm:px-6 lg:pt-8 lg:pb-28 lg:px-8">
         <div className="max-w-screen-lg mx-auto">
           <div className="border-b-2 border-gray-800 pb-10">
@@ -75,11 +75,12 @@ const PostsIndexPage = ({ posts }) => {
 export const getServerSideProps = async () => {
   const res = await fetch(server + "/api/v1/posts/");
   const posts = await res.json();
-
+  const documentation = process.env.DOCUMENTATION;
   return {
     props: {
       posts,
       server,
+      documentation,
     },
   };
 };

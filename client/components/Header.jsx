@@ -3,11 +3,11 @@ import { useRouter } from "next/router";
 import Transition from "./Transition";
 import React, { useState } from "react";
 
-const Header = ({ subtitle }) => {
+const Header = ({ subtitle, docsUrl }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const path = useRouter().pathname;
-  const documentation = "https://doc.genemator.me";
+  const documentation = docsUrl;
 
   const homeDetectMenu = () => {
     if (path !== "/") {
@@ -163,7 +163,7 @@ const Header = ({ subtitle }) => {
                   <nav className="grid row-gap-8">
                     {homeDetectResponsive()}
                     <Link href="/posts">
-                      <a className="-m-3 p-3 flex items-center space-x-3 rounded-md text-black hover:bg-black hover:text-white transition ease-in-out duration-150">
+                      <a className="-m-3 mt-3 p-3 flex items-center space-x-3 rounded-md text-black hover:bg-black hover:text-white transition ease-in-out duration-150">
                         <svg
                           className="flex-shrink-0 h-6 w-6"
                           fill="none"

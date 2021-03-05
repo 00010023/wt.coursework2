@@ -8,7 +8,7 @@ import Markdown from "../../components/Markdown";
 
 const server = process.env.DATABASE;
 
-const NewsPostPage = ({ post, server }) => {
+const NewsPostPage = ({ post, server, documentation }) => {
   const published = () => {
     if (post.createdAt === post.updatedAt) return post.createdAt;
     if (post.createdAt !== post.updatedAt) return post.updatedAt;
@@ -51,7 +51,7 @@ const NewsPostPage = ({ post, server }) => {
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.snippet} />
       </Head>
-      <Header subtitle={post.title} />
+      <Header subtitle={post.title} docsUrl={documentation} />
       <div className="max-w-screen-md mx-auto px-4 sm:px-6 md:px-8 py-8 mb-16">
         <Link href="/posts">
           <a className="link">&lt;- Back to overview</a>
@@ -100,6 +100,7 @@ const NewsPostPage = ({ post, server }) => {
 };
 
 export async function getServerSideProps(context) {
+  const documentation = process.env.DOCUMENTATION;
   const post = await fetch(
     server + "/api/v1/posts/" + context.params.post
   ).then(async (res) => {
@@ -110,6 +111,7 @@ export async function getServerSideProps(context) {
     props: {
       post,
       server,
+      documentation,
     },
   };
 }

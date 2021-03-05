@@ -4,7 +4,7 @@ import Router from "next/router";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-export default function Custom404() {
+export default function Custom404({ documentation }) {
   return (
     <>
       <Head>
@@ -15,7 +15,7 @@ export default function Custom404() {
           content="This page's preview is not available as this page doesn't exist"
         />
       </Head>
-      <Header subtitle="404" />
+      <Header subtitle="404" docsUrl={documentation} />
       <div className="h-auto">
         <div className="flex mb-4 justify-center mt-64">
           <div className="text-black text-center text-center xl:text-6xl lg:text-5xl text-4xl border rounded hover:bg-black hover:text-white">
@@ -39,4 +39,13 @@ export default function Custom404() {
       <Footer />
     </>
   );
+}
+
+export async function getStaticProps() {
+  const documentation = process.env.DOCUMENTATION;
+  return {
+    props: {
+      documentation,
+    },
+  };
 }
