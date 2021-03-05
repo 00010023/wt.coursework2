@@ -32,11 +32,16 @@ const NewsPostPage = ({ post, server }) => {
   const deletePost = () => {
     setDeleteText("Hold on a second, processing...");
     fetch(server + "/api/v1/posts/" + post._id, options)
-      .then((result) => console.log(result))
-      .catch((error) => console.log("error", error));
-    setTimeout(() => {
-      Router.push("/posts");
-    }, 1000);
+      .then((result) =>
+        setTimeout(() => {
+          Router.push("/posts");
+        }, 1000)
+      )
+      .catch((error) =>
+        setTimeout(() => {
+          Router.push("/404");
+        }, 1000)
+      );
   };
 
   return (
