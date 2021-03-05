@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const server = process.env.DATABASE;
 
-const PostsIndexPage = ({ posts }) => {
+const PostsIndexPage = ({ posts, server }) => {
   return (
     <>
       <Head>
@@ -79,6 +79,7 @@ export const getServerSideProps = async () => {
   return {
     props: {
       posts,
+      server,
     },
   };
 };
