@@ -63,8 +63,9 @@ const NewsPostPage = ({ post, server }) => {
         <div className="telegram-post mt-8">
           <Markdown
             source={post.content}
-            displayURL={`${server}/api/v1/posts/${props.meta.id}/md`}
-            sourceURL={`${server}/api/v1/posts/${props.meta.id}/md`}
+            displayURL={`${server}/api/v1/posts/${post._id}/md`}
+            sourceURL={`${server}/api/v1/posts/${post._id}/md`}
+            baseURL={`${server}/api/v1/posts/${post._id}/md`}
           />
         </div>
         <a href={"/edit/" + post._id}>
