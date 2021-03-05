@@ -1,3 +1,4 @@
+import useSWR from "swr";
 import React from "react";
 import Head from "next/head";
 import Header from "../../components/Header";
@@ -7,6 +8,10 @@ import Link from "next/link";
 const server = process.env.DATABASE;
 
 const PostsIndexPage = ({ posts, server }) => {
+  const fetcher = (...args) => fetch(...args).then((res) => res.json());
+  const { data } = useSWR(server + "/api/v1/posts/", fetcher, {
+    initialData: posts,
+  });
   return (
     <>
       <Head>
@@ -32,7 +37,7 @@ const PostsIndexPage = ({ posts, server }) => {
             </div>
           </div>
           <div className="mt-6 grid gap-16 lg:grid-cols-2 lg:col-gap-5 lg:row-gap-12">
-            {posts.map((post) => {
+            {data.map((post) => {
               const date = new Date(post.createdAt);
               const format = new Intl.DateTimeFormat(undefined, {
                 month: "long",
