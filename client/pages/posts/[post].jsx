@@ -31,6 +31,10 @@ const NewsPostPage = ({ post }) => {
     redirect: "follow",
   };
 
+  const checkPost = () => {
+    console.log(server + "/api/v1/posts/" + post._id)
+  }
+
   const deletePost = () => {
     fetch(server + "/api/v1/posts/" + post._id, options)
       .then((result) => console.log(result))
@@ -70,6 +74,11 @@ const NewsPostPage = ({ post }) => {
         <a onClick={deletePost}>
           <div className="mt-4 text-center border rounded bg-white text-black hover:text-white hover:bg-red-700 select-none">
             Delete the post
+          </div>
+        </a>
+        <a onClick={checkPost}>
+          <div className="mt-4 text-center border rounded bg-white text-black hover:text-white hover:bg-yellow-300 select-none">
+            Check the post
           </div>
         </a>
       </div>
