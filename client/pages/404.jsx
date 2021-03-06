@@ -6,6 +6,19 @@ import Footer from "../components/Footer";
 import Notification from "../components/Notification";
 
 export default function Custom404({ documentation }) {
+  const phrases = [
+    "Hello Darkness, my old waifu...",
+    "sudo rm -rf **/*",
+    "why you bully me?",
+    "KUKLI STYLE ACTIVATED!",
+    "Ohayo... Sayonara...",
+    "Stop it, get some drink!",
+    "IT'S TIME TO STOP OKAY?!",
+    "Surprise motherfathers!",
+  ];
+  const possibilities = Math.floor(Math.random() * phrases.length);
+  const choice = phrases[possibilities];
+
   return (
     <>
       <Head>
@@ -26,7 +39,7 @@ export default function Custom404({ documentation }) {
         </div>
         <div className="flex mb-4 justify-center">
           <div className="text-black text-center xl:text-3xl lg:text-2xl text-1xl">
-            Stay stunned for new updates...
+            {choice}
           </div>
         </div>
         <div className="flex mb-4 justify-center mb-64">
