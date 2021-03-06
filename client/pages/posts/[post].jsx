@@ -108,8 +108,9 @@ export async function getServerSideProps(context) {
   const post = await fetch(
     server + "/api/v1/posts/" + context.params.post
   ).then(async (res) => {
-    return res.json();
+    return await res.json();
   });
+
   return {
     props: {
       post,

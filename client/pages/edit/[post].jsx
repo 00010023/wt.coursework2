@@ -208,13 +208,6 @@ export async function getServerSideProps(context) {
     return res.json();
   });
 
-  if (!post) {
-    return {
-      notFound: true,
-      redirect: "/posts",
-    };
-  }
-
   return {
     props: {
       post,
