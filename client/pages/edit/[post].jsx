@@ -201,20 +201,34 @@ const NewsPostPage = ({ post, server, documentation }) => {
 };
 
 export async function getServerSideProps(context) {
-  const documentation = process.env.DOCUMENTATION;
-  const post = await fetch(
-    server + "/api/v1/posts/" + context.params.post
-  ).then(async (res) => {
-    return res.json();
-  });
+  try {
+    const documentation = process.env.DOCUMENTATION;
+    const post = await fetch(
+      server + "/api/v1/posts/" + context.params.post
+    ).then(async (res) => {
+      return res.json();
+    });
 
-  return {
-    props: {
-      post,
-      server,
-      documentation,
-    },
-  };
+    if (!post) {
+      return {
+        notFound: true,
+        redirect: "/posts",
+      };
+    }
+
+    return {
+      props: {
+        post,
+        server,
+        documentation,
+      },
+    };
+  } catch (err) {
+    return {
+      notFound: true,
+      redirect: "/posts",
+    };
+  }
 }
 
 export default NewsPostPage;
