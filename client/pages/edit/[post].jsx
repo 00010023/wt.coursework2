@@ -205,9 +205,17 @@ export async function getServerSideProps(context) {
   const post = await fetch(
     server + "/api/v1/posts/" + context.params.post
   ).then(async (res) => {
-    return res.json();
+    return {
+      code: res.status,
+      result: await res.json(),
+    };
   });
 
+  if (posts.code !== 200) {
+    return {
+      notFound: true,
+    };
+  }
   return {
     props: {
       post,
