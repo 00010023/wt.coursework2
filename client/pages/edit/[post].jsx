@@ -1,20 +1,22 @@
+import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Router from "next/router";
-import React, { useState } from "react";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import Markdown from "../components/Markdown";
-import Notification from "../components/Notification";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+import Markdown from "../../components/Markdown";
+import Notification from "../../components/Notification";
 
-const NewPostPage = ({ server, documentation }) => {
+const server = process.env.DATABASE;
+
+const NewsPostPage = ({ post, server, documentation }) => {
   const [isProcessing, setProcess] = useState(false);
-  const [postTitle, setPostTitle] = useState("");
-  const [postDescription, setPostDescription] = useState("");
-  const [postAuthor, setPostAuthor] = useState("");
-  const [postText, setPostText] = useState("");
-  const [createText, setCreateText] = useState("Create Post");
-  const [previewC, setPreview] = useState("# Preview for content will be here");
+  const [postTitle, setPostTitle] = useState(post.title);
+  const [postDescription, setPostDescription] = useState(post.snippet);
+  const [postAuthor, setPostAuthor] = useState(post.author);
+  const [postText, setPostText] = useState(post.content);
+  const [editText, setEditText] = useState("Edit Post");
+  const [previewC, setPreview] = useState(post.content);
 
   const preview = () => {
     if (postText === "") {
@@ -31,25 +33,25 @@ const NewPostPage = ({ server, documentation }) => {
     content: postText,
   };
 
-  const createPost = () => {
-    setCreateText("Processing...");
+  const editPost = () => {
+    setEditText("Processing...");
     if (!isProcessing) {
       if (postTitle === "") {
-        alert("You forgot to implement title of the post!");
-        setCreateText("Create Post");
+        alert("You left title empty");
+        setEditText("Edit Post");
       } else if (postDescription === "") {
-        alert("You forgot to implement description for the post!");
-        setCreateText("Create Post");
+        alert("You left snippet empty!");
+        setEditText("Edit Post");
       } else if (postAuthor === "") {
-        alert("You forgot to implement author of the post!");
-        setCreateText("Create Post");
+        alert("You left author empty!");
+        setEditText("Edit Post");
       } else if (postText === "") {
-        alert("You forgot to type some content!");
-        setCreateText("Create Post");
+        alert("You left content empty!");
+        setEditText("Edit Post");
       } else {
         setProcess(true);
-        fetch(server + "/api/v1/posts", {
-          method: "POST",
+        fetch(server + "/api/v1/posts/" + post._id, {
+          method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(raw),
           redirect: "follow",
@@ -60,7 +62,7 @@ const NewPostPage = ({ server, documentation }) => {
               await Router.push("/posts/" + text._id);
             }, 500)
           )
-          .catch((error) =>
+          .catch(() =>
             setTimeout(() => {
               Router.push("/404");
             }, 1000)
@@ -70,21 +72,41 @@ const NewPostPage = ({ server, documentation }) => {
       alert(
         "HOLD ON BUD! No need to flood... Your request is already pending!"
       );
-      setCreateText("Create Post");
+      setEditText("Edit Post");
     }
+  };
+
+  const [deleteText, setDeleteText] = useState("Delete the post");
+  const deletePost = () => {
+    setDeleteText("Processing...");
+    fetch(server + "/api/v1/posts/" + post._id, {
+      method: "DELETE",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: null,
+      redirect: "follow",
+    })
+      .then(() =>
+        setTimeout(() => {
+          Router.push("/posts");
+        }, 500)
+      )
+      .catch(() =>
+        setTimeout(() => {
+          Router.push("/404");
+        }, 1000)
+      );
   };
 
   return (
     <>
       <Head>
-        <title>Create a post | Genemator's</title>
-        <meta property="og:title" content="Create A Post" />
-        <meta
-          property="og:description"
-          content="Creating a post in Gendy's Blog"
-        />
+        <title>{post.title} | Genemator's</title>
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.snippet} />
       </Head>
-      <Header subtitle="Create a post" docsUrl={documentation} />
+      <Header subtitle={post.title} docsUrl={documentation} />
       <Notification news="This blog app is dedicated to fulfill WIUT's requirements" />
       <div className="max-w-screen-md mx-auto px-4 sm:px-6 md:px-8 py-8 mb-16">
         <Link href="/posts">
@@ -143,15 +165,20 @@ const NewPostPage = ({ server, documentation }) => {
         </div>
         <div className="max-w-screen-lg mx-auto px-4 sm:px-6 md:px-8 mt-8">
           <div className="items-center justify-center text-center">
-            <div className="grid lg:grid-cols-2 lg:col-gap-5 lg:row-gap-12">
-              <a onClick={createPost}>
+            <div className="grid lg:grid-cols-3 lg:col-gap-5 lg:row-gap-12">
+              <a onClick={editPost}>
                 <div className="mt-4 py-2 mx-5 px-2 border rounded bg-white text-black hover:text-white hover:bg-black active:bg-gray-700 select-none">
-                  {createText}
+                  {editText}
                 </div>
               </a>
               <a onClick={preview}>
                 <div className="mt-4 py-2 mx-5 px-2 border rounded bg-white text-black hover:text-white hover:bg-black active:bg-gray-700 select-none">
                   Preview the post
+                </div>
+              </a>
+              <a onClick={deletePost}>
+                <div className="mt-4 py-2 mx-5 px-2 border rounded bg-white text-black hover:text-white hover:bg-red-700 active:bg-red-400 select-none">
+                  {deleteText}
                 </div>
               </a>
             </div>
@@ -173,15 +200,21 @@ const NewPostPage = ({ server, documentation }) => {
   );
 };
 
-export async function getStaticProps() {
-  const server = process.env.DATABASE;
+export async function getServerSideProps(context) {
   const documentation = process.env.DOCUMENTATION;
+  const post = await fetch(
+    server + "/api/v1/posts/" + context.params.post
+  ).then(async (res) => {
+    return res.json();
+  });
+
   return {
     props: {
+      post,
       server,
       documentation,
     },
   };
 }
 
-export default NewPostPage;
+export default NewsPostPage;

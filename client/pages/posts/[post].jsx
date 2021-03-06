@@ -31,7 +31,7 @@ const NewsPostPage = ({ post, server, documentation }) => {
   };
   const [deleteText, setDeleteText] = useState("Delete the post");
   const deletePost = () => {
-    setDeleteText("Hold on a second, processing...");
+    setDeleteText("Processing...");
     fetch(server + "/api/v1/posts/" + post._id, options)
       .then((result) =>
         setTimeout(() => {
@@ -76,11 +76,13 @@ const NewsPostPage = ({ post, server, documentation }) => {
         </div>
         <div className="items-center justify-center text-center">
           <div className="grid lg:grid-cols-3 lg:col-gap-5 lg:row-gap-12">
-            <a href={"/edit/" + post._id}>
-              <div className="mt-4 py-2 mx-1 px-2 border rounded bg-white text-black hover:text-white hover:bg-black active:bg-gray-700 select-none">
-                Edit the post
-              </div>
-            </a>
+            <Link href={"/edit/[post]"} as={"/edit/" + post._id}>
+              <a>
+                <div className="mt-4 py-2 mx-1 px-2 border rounded bg-white text-black hover:text-white hover:bg-black active:bg-gray-700 select-none">
+                  Edit the post
+                </div>
+              </a>
+            </Link>
             <a onClick={deletePost}>
               <div className="mt-4 py-2 mx-1 px-2 border rounded bg-white text-black hover:text-white hover:bg-red-700 active:bg-red-400 select-none">
                 {deleteText}

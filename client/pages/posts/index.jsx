@@ -67,6 +67,15 @@ const PostsIndexPage = ({ posts, documentation }) => {
               );
             })}
           </div>
+          <div className="items-end justify-end text-center">
+            <Link href="/new">
+              <a>
+                <div className="mt-4 py-2 mx-1 px-2 border rounded bg-white text-black hover:text-white hover:bg-black active:bg-gray-700 select-none">
+                  Create yours
+                </div>
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
       <Footer />
