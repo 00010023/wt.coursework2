@@ -93,9 +93,9 @@ module.exports = {
     sidebar: {
       "/guide/": [
         {
-          title: "Guide",
+          title: "The Coursework",
           collapsable: false,
-          children: ["", "tree"],
+          children: ["", "docs", "tree"],
         },
       ],
       "/setup/": [
