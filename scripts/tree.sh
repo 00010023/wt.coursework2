@@ -2,17 +2,15 @@
 cd "$(dirname "$0")" || exit
 
 delete() {
-  if [ ! -f ./tree.txt ]; then
-    rm -rf ./tree.txt
-    echo "File not found!"
+  if [ -f ./docs/src/.vuepress/public/tree.txt ]; then
+    rm -rf ./docs/src/.vuepress/public/tree.txt
   fi
 }
 
 create() {
   tree -a -D -I 'node_modules|.next|yarn-error.log|dist|.git|.DS_Store|.idea' -o tree.txt
+  mv ./tree.txt ./docs/src/.vuepress/public
 }
 
-cd ../ || exit
-delete
-create
+cd ../ && delete && create || exit
 exit 0

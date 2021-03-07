@@ -15,8 +15,7 @@ export default {
     return {
       tree: null,
       loading: false,
-      link:
-        "https://raw.githubusercontent.com/00010023/wt.coursework2/main/tree.txt",
+      link: "/tree.txt",
     };
   },
   created() {

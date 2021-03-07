@@ -49,12 +49,13 @@
 │   ├── [Mar  3 00:37]  README.md
 │   ├── [Mar  7 09:21]  package.json
 │   ├── [Mar  7 08:07]  src
-│   │   ├── [Mar  7 13:37]  .vuepress
-│   │   │   ├── [Mar  7 13:33]  components
+│   │   ├── [Mar  7 23:26]  .vuepress
+│   │   │   ├── [Mar  7 23:32]  components
 │   │   │   │   ├── [Mar  7 11:45]  Health.vue
-│   │   │   │   └── [Mar  7 13:33]  Tree.vue
+│   │   │   │   └── [Mar  7 23:32]  Tree.vue
 │   │   │   ├── [Mar  7 13:37]  config.js
 │   │   │   ├── [Mar  3 00:37]  enhanceApp.js
+│   │   │   ├── [Mar  7 23:32]  public
 │   │   │   └── [Mar  7 09:29]  styles
 │   │   │       ├── [Mar  7 09:29]  index.styl
 │   │   │       └── [Aug 31  2020]  palette.styl
@@ -74,12 +75,12 @@
 ├── [Mar  2 06:07]  license
 ├── [Mar  7 23:23]  package.json
 ├── [Mar  7 12:42]  readme.md
-├── [Mar  7 22:52]  scripts
+├── [Mar  7 23:28]  scripts
 │   ├── [Mar  7 21:47]  cleanup.sh
 │   ├── [Mar  7 23:18]  client.sh
 │   ├── [Mar  7 23:18]  docs.sh
 │   ├── [Mar  7 23:18]  server.sh
-│   ├── [Mar  7 22:52]  tree.sh
+│   ├── [Mar  7 23:28]  tree.sh
 │   ├── [Mar  7 13:18]  update-client.sh
 │   └── [Mar  3 01:54]  update-server-doc.sh
 ├── [Mar  7 05:35]  server
@@ -108,9 +109,9 @@
 │   │   └── [Mar  7 05:35]  routes.mjs
 │   └── [Mar  5 18:06]  yarn.lock
 ├── [Mar  7 23:18]  serverland.sh
-├── [Mar  7 23:23]  tree.txt
+├── [Mar  7 23:32]  tree.txt
 ├── [Mar  7 13:18]  update.sh
 ├── [Mar  7 23:18]  upload.sh
 └── [Mar  7 23:18]  yarn.lock
 
-26 directories, 87 files
+27 directories, 87 files
