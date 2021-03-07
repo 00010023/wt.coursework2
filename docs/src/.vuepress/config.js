@@ -91,18 +91,18 @@ module.exports = {
       },
     ],
     sidebar: {
+      "/guide/": [
+        {
+          title: "Guide",
+          collapsable: false,
+          children: ["", "tree" ],
+        },
+      ],
       "/setup/": [
         {
           title: "Setup",
           collapsable: false,
           children: ["", "client", "server"],
-        },
-      ],
-      "/guide/": [
-        {
-          title: "Guide",
-          collapsable: false,
-          children: ["", "tree"],
         },
       ],
     },
