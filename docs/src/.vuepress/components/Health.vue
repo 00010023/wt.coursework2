@@ -1,7 +1,7 @@
 <template>
   <p class="demo">
-    🎛 Host: {{ link }} <br />
-    <template v-if="loading"> Loading... </template>
+    🎛 Host: <a :href="link" target="_blank">{{ link }}</a> <br />
+    <template v-if="loading">🟡 Status: Loading... </template>
     <template v-else>{{ msg }} </template>
   </p>
 </template>
@@ -9,6 +9,7 @@
 <script>
 import axios from "axios";
 export default {
+  name: "Health",
   props: {
     host: {
       type: String,

@@ -91,6 +91,21 @@ module.exports = {
       ],
     },
   },
-  plugins: ["@vuepress/plugin-back-to-top", "@vuepress/plugin-medium-zoom"],
+  plugins: [
+    "@vuepress/plugin-back-to-top",
+    "@vuepress/plugin-medium-zoom",
+    [
+      "one-click-copy",
+      {
+        copySelector: [
+          'div[class*="language-"] pre',
+          'div[class*="aside-code"] aside',
+        ],
+        copyMessage: "Copied successfully... Now execute it!",
+        duration: 3000,
+        showInMobile: false,
+      },
+    ],
+  ],
   evergreen: true,
 };
