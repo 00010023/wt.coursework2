@@ -52,6 +52,10 @@ module.exports = {
             text: "Local",
             link: "/health/local",
           },
+          {
+            text: "Structure",
+            link: "/health/struct",
+          },
         ],
       },
       {

@@ -1,6 +1,18 @@
 # Structure
 
-From the structure below, there has been displayed recursive structure of the
-whole ecosystem (with date of last edits)!
+## Rules...
 
-<Tree></Tree>
+```
+.   (root)
+├── app.js
+├── package.json
+├── .gitignore
+├── node_modules
+│   └── ... packages
+├── public
+│   ├── images
+│   ├── javascripts
+│   └── styles
+│       └── style.css
+
+```
