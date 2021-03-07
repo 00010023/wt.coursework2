@@ -1,27 +1,25 @@
 <template>
   <p class="demo">
-    <template v-if="loading">Loading...</template>
+    <template v-if="isLocal">
+      <p>
+        We detected that this app is running on localhost, so we will be showing
+        you status of localhost apps.
+      </p>
+      <h3>Client side</h3>
+      <Health host="http://localhost:3000"></Health>
+      <h3>Server side</h3>
+      <Health host="http://localhost:3001/api/v1/posts"></Health>
+    </template>
     <template v-else>
-      <template v-if="isLocal">
-        <p>
-          We detected that this app is running on localhost, so we will be
-          showing you status of localhost apps.
-        </p>
-        <h3>Client side</h3>
-        <Health host="http://localhost:3000"></Health>
-        <h3>Server side</h3>
-        <Health host="http://localhost:3001/api/v1/posts"></Health>
-      </template>
-      <template v-else>
-        <p>
-          We detected that this app is running on localhost, so we will be
-          showing you status of localhost apps.
-        </p>
-        <h3>Client side</h3>
-        <Health host="https://wt.genemator.me"></Health>
-        <h3>Server side</h3>
-        <Health host="https://srv.genemator.me/api/v1/posts"></Health>
-      </template>
+      <p>
+        {{ domainName }} <br />
+        We detected that this app is running on localhost, so we will be showing
+        you status of localhost apps.
+      </p>
+      <h3>Client side</h3>
+      <Health host="https://wt.genemator.me"></Health>
+      <h3>Server side</h3>
+      <Health host="https://srv.genemator.me/api/v1/posts"></Health>
     </template>
   </p>
 </template>
@@ -36,17 +34,18 @@ export default {
   data() {
     return {
       isLocal: null,
-      loading: false,
+      domainName: "",
     };
   },
-  created() {
-    this.getURL(location.host);
+  mounted() {
+    this.getURL(window.location.host);
+    this.domainName = window.location.host;
   },
+
   methods: {
     getURL(link) {
-      this.loading = true;
       this.isLocal = !!link.includes("localhost");
-      this.loading = false;
+      this.domainName = location.host;
     },
   },
 };
