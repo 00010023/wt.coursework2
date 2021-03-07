@@ -87,3 +87,183 @@
 └── yarn.lock
 
 21 directories, 65 files
+.
+├── client
+│   ├── components
+│   │   ├── CodeBlock.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Header.jsx
+│   │   ├── Markdown.jsx
+│   │   ├── Notification.jsx
+│   │   └── Transition.jsx
+│   ├── next.config.js
+│   ├── package.json
+│   ├── pages
+│   │   ├── 404.jsx
+│   │   ├── _app.jsx
+│   │   ├── _document.jsx
+│   │   ├── _error.jsx
+│   │   ├── edit
+│   │   │   └── [post].jsx
+│   │   ├── index.jsx
+│   │   ├── new.jsx
+│   │   └── posts
+│   │       ├── [post].jsx
+│   │       └── index.jsx
+│   ├── postcss.config.js
+│   ├── public
+│   │   ├── cursor.cur
+│   │   ├── cursor.png
+│   │   └── favicon.ico
+│   ├── styles
+│   │   ├── globals.css
+│   │   ├── markdown.css
+│   │   └── ngprogress.css
+│   ├── tailwind.config.js
+│   ├── util
+│   │   ├── emoji_util.js
+│   │   └── emojis.json
+│   └── yarn.lock
+├── docs
+│   ├── LICENSE
+│   ├── README.md
+│   ├── package.json
+│   ├── src
+│   │   ├── guide
+│   │   │   ├── index.md
+│   │   │   └── tree.md
+│   │   ├── health
+│   │   │   ├── cloud.md
+│   │   │   └── local.md
+│   │   ├── index.md
+│   │   └── setup
+│   │       ├── client.md
+│   │       ├── index.md
+│   │       └── server.md
+│   └── yarn.lock
+├── install
+├── license
+├── package.json
+├── readme.md
+├── scripts
+│   ├── client.sh
+│   ├── docs.sh
+│   ├── server.sh
+│   ├── update-client.sh
+│   └── update-server-doc.sh
+├── server
+│   ├── Procfile
+│   ├── apps
+│   │   ├── config
+│   │   │   ├── database.config.mjs
+│   │   │   ├── env.config.mjs
+│   │   │   ├── package.config.mjs
+│   │   │   └── server.config.mjs
+│   │   ├── core
+│   │   │   └── server.mjs
+│   │   └── database
+│   │       └── mongoose.mjs
+│   ├── bin
+│   │   └── www.mjs
+│   ├── package.json
+│   ├── posts
+│   │   ├── controller.mjs
+│   │   ├── model.mjs
+│   │   └── routes.mjs
+│   └── yarn.lock
+├── serverland
+├── tree
+├── update
+└── yarn.lock
+
+21 directories, 66 files
+.
+├── client
+│   ├── components
+│   │   ├── CodeBlock.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Header.jsx
+│   │   ├── Markdown.jsx
+│   │   ├── Notification.jsx
+│   │   └── Transition.jsx
+│   ├── next.config.js
+│   ├── package.json
+│   ├── pages
+│   │   ├── 404.jsx
+│   │   ├── _app.jsx
+│   │   ├── _document.jsx
+│   │   ├── _error.jsx
+│   │   ├── edit
+│   │   │   └── [post].jsx
+│   │   ├── index.jsx
+│   │   ├── new.jsx
+│   │   └── posts
+│   │       ├── [post].jsx
+│   │       └── index.jsx
+│   ├── postcss.config.js
+│   ├── public
+│   │   ├── cursor.cur
+│   │   ├── cursor.png
+│   │   └── favicon.ico
+│   ├── styles
+│   │   ├── globals.css
+│   │   ├── markdown.css
+│   │   └── ngprogress.css
+│   ├── tailwind.config.js
+│   ├── util
+│   │   ├── emoji_util.js
+│   │   └── emojis.json
+│   └── yarn.lock
+├── docs
+│   ├── LICENSE
+│   ├── README.md
+│   ├── package.json
+│   ├── src
+│   │   ├── guide
+│   │   │   ├── index.md
+│   │   │   └── tree.md
+│   │   ├── health
+│   │   │   ├── cloud.md
+│   │   │   └── local.md
+│   │   ├── index.md
+│   │   └── setup
+│   │       ├── client.md
+│   │       ├── index.md
+│   │       └── server.md
+│   └── yarn.lock
+├── install
+├── license
+├── package.json
+├── readme.md
+├── scripts
+│   ├── client.sh
+│   ├── docs.sh
+│   ├── server.sh
+│   ├── update-client.sh
+│   └── update-server-doc.sh
+├── server
+│   ├── Procfile
+│   ├── apps
+│   │   ├── config
+│   │   │   ├── database.config.mjs
+│   │   │   ├── env.config.mjs
+│   │   │   ├── package.config.mjs
+│   │   │   └── server.config.mjs
+│   │   ├── core
+│   │   │   └── server.mjs
+│   │   └── database
+│   │       └── mongoose.mjs
+│   ├── bin
+│   │   └── www.mjs
+│   ├── package.json
+│   ├── posts
+│   │   ├── controller.mjs
+│   │   ├── model.mjs
+│   │   └── routes.mjs
+│   └── yarn.lock
+├── serverland
+├── tree
+├── update
+└── yarn.lock
+
+21 directories, 66 files
