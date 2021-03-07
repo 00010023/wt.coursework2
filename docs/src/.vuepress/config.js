@@ -43,7 +43,16 @@ module.exports = {
       },
       {
         text: "Health",
-        link: "/health/",
+        items: [
+          {
+            text: "Cloud",
+            link: "/health/cloud",
+          },
+          {
+            text: "Local",
+            link: "/health/local",
+          },
+        ],
       },
       {
         text: "Links",

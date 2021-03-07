@@ -13,6 +13,7 @@ export default {
   props: {
     host: {
       type: String,
+      required: true,
     },
   },
   data() {
