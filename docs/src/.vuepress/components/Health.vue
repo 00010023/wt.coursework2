@@ -29,7 +29,7 @@ export default {
       this.loading = true;
       axios
         .get(link, {
-          timeout: 1000,
+          timeout: 3000,
         })
         .then((res) => {
           if (res.status === 200) {
@@ -54,10 +54,12 @@ export default {
           this.loading = false;
           if (this.link.includes("localhost")) {
             this.msg =
-              "🔴 Status: Not responding, did you start local session? // ";
+              "🔴 Status: Not responding, did you start local session? // " +
+              err;
           } else {
             this.msg =
-              "🔴 Status: Error occurred while handling response, might be broken // ";
+              "🔴 Status: Error occurred while handling response, might be broken // " +
+              err;
           }
         });
     },
