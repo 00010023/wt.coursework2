@@ -102,7 +102,7 @@ export const update = async (req, res) => {
     });
   }
 
-  // Find post and update it with the request body
+  // Find post and update.sh it with the request body
   await Post.findByIdAndUpdate(
     req.params.postId,
     {

@@ -11,10 +11,13 @@
     "docs": "./scripts/docs.sh",
     "format": "prettier --write --check \"**/*.js\" \"**/*.jsx\" \"**/*.md\" \"**/*.css\" \"**/*.vue\"\n",
     "format:check": "prettier --check \"**/*.js\" \"**/*.jsx\" \"**/*.md\" \"**/*.css\" \"**/*.vue\"\n",
-    "git": "yarn run dir && ./update",
-    "initialize": "./install",
-    "all": "./serverland",
-    "dir": "rm -rf ./tree.txt && tree -a -D -I 'node_modules|.next|yarn-error.log|dist|.git|.DS_Store|.idea' -o tree.txt"
+    "git": "yarn run tree && ./update.sh",
+    "initialize": "./install.sh",
+    "all": "./serverland.sh",
+    "tree": "./scripts/tree.sh",
+    "cleanup": "./scripts/cleanup.sh",
+    "build": "./upload.sh",
+    "upload": "yarn run cleanup && yarn run "
   },
   "dependencies": {
     "node-fetch": "^2.6.1",
