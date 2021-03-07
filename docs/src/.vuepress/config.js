@@ -95,7 +95,7 @@ module.exports = {
         {
           title: "Guide",
           collapsable: false,
-          children: ["", "tree" ],
+          children: ["", "tree"],
         },
       ],
       "/setup/": [
