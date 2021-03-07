@@ -5,7 +5,10 @@
 Dear staff, I know that you're shitty bored with scriptkiddies' coursework. Now,
 let me take your time more joyful and in a way more interesting. All you have to
 do is just launch the documentation website that is hosted on cloud either you
-can run it locally too.
+can run it locally too. By the way, **it's highly recommended running my project
+on top of UNIX typo system**. Nevertheless, my shell scripts that was tended to
+work on Linux command line interface won't work on _cocky Windows Operating
+System_.
 
 ### For cloud solutions
 
