@@ -1,8 +1,9 @@
 <template>
   <p class="demo">
-    🎛 Host: <a :href="link" target="_blank">{{ link }}</a> <br />
-    <template v-if="loading">⚡️ Downloading the tree... </template>
-    <template v-else>{{ msg }} </template>
+    <template v-if="loading">⚡️ Downloading tree map... </template>
+    <template v-else>
+      <pre>{{ tree }}</pre>
+    </template>
   </p>
 </template>
 
@@ -10,17 +11,12 @@
 import axios from "axios";
 export default {
   name: "Tree",
-  props: {
-    host: {
-      type: String,
-      required: true,
-    },
-  },
   data() {
     return {
       tree: null,
       loading: false,
-      link: this.host,
+      link:
+        "https://raw.githubusercontent.com/00010023/wt.coursework2/main/tree",
     };
   },
   created() {
@@ -34,7 +30,8 @@ export default {
           timeout: 3000,
         })
         .then((res) => {
-          res.data;
+          this.loading = false;
+          this.tree = res.data;
         })
         .catch((err) => {
           this.loading = false;

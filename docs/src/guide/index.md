@@ -4,4 +4,4 @@ sidebar: auto
 
 # The App
 
-<Tree host=""></Tree>
+<Tree></Tree>
