@@ -1,0 +1,113 @@
+.
+├── [  96 Mar  2 23:47]  .github
+│   └── [  96 Nov 26 19:01]  workflows
+│       └── [ 798 Nov 26 19:01]  test.yml
+├── [  34 Mar  3 01:39]  .gitignore
+├── [  37 Mar  7 11:55]  .prettierignore
+├── [ 544 Mar  7 07:29]  client
+│   ├── [  67 Mar  5 18:30]  .env.local
+│   ├── [ 376 Mar  7 07:29]  .gitignore
+│   ├── [ 256 Mar  6 04:53]  components
+│   │   ├── [4.2K Mar  5 18:21]  CodeBlock.jsx
+│   │   ├── [ 657 Mar  2 22:59]  Footer.jsx
+│   │   ├── [8.4K Mar  6 04:39]  Header.jsx
+│   │   ├── [4.6K Mar  5 18:21]  Markdown.jsx
+│   │   ├── [1004 Mar  6 04:54]  Notification.jsx
+│   │   └── [2.7K Mar  2 21:52]  Transition.jsx
+│   ├── [ 264 Mar  6 05:06]  next.config.js
+│   ├── [ 662 Mar  5 22:15]  package.json
+│   ├── [ 352 Mar  6 06:40]  pages
+│   │   ├── [2.0K Mar  6 06:27]  404.jsx
+│   │   ├── [1014 Mar  6 00:15]  _app.jsx
+│   │   ├── [ 630 Mar  2 14:03]  _document.jsx
+│   │   ├── [1.8K Mar  6 06:41]  _error.jsx
+│   │   ├── [  96 Mar  6 06:17]  edit
+│   │   │   └── [7.8K Mar  6 06:18]  [post].jsx
+│   │   ├── [3.2K Mar  6 04:32]  index.jsx
+│   │   ├── [6.8K Mar  6 05:33]  new.jsx
+│   │   └── [ 128 Mar  6 18:16]  posts
+│   │       ├── [4.0K Mar  6 18:16]  [post].jsx
+│   │       └── [3.7K Mar  6 06:18]  index.jsx
+│   ├── [ 204 Mar  2 01:13]  postcss.config.js
+│   ├── [ 160 Mar  2 22:58]  public
+│   │   ├── [4.2K Mar  2 22:56]  cursor.cur
+│   │   ├── [ 720 Mar  2 22:56]  cursor.png
+│   │   └── [ 15K Mar  2 00:00]  favicon.ico
+│   ├── [ 160 Mar  5 18:25]  styles
+│   │   ├── [4.4K Mar  2 22:59]  globals.css
+│   │   ├── [8.9K Mar  5 18:25]  markdown.css
+│   │   └── [1.4K Mar  2 22:59]  ngprogress.css
+│   ├── [ 768 Mar  2 21:52]  tailwind.config.js
+│   ├── [ 128 Mar  5 16:38]  util
+│   │   ├── [ 305 Mar  5 17:21]  emoji_util.js
+│   │   └── [ 40K Mar  5 16:38]  emojis.json
+│   └── [ 90K Mar  5 22:15]  yarn.lock
+├── [ 352 Mar  7 12:48]  docs
+│   ├── [1.6K Mar  7 05:39]  .gitignore
+│   ├── [  18 Aug 31  2020]  .npmrc
+│   ├── [ 34K Aug 31  2020]  LICENSE
+│   ├── [  57 Mar  3 00:37]  README.md
+│   ├── [ 921 Mar  7 09:21]  package.json
+│   ├── [ 224 Mar  7 08:07]  src
+│   │   ├── [ 192 Mar  7 12:41]  .vuepress
+│   │   │   ├── [ 128 Mar  7 13:03]  components
+│   │   │   │   ├── [1.7K Mar  7 11:45]  Health.vue
+│   │   │   │   └── [ 875 Mar  7 13:07]  Tree.vue
+│   │   │   ├── [2.6K Mar  7 12:41]  config.js
+│   │   │   ├── [ 380 Mar  3 00:37]  enhanceApp.js
+│   │   │   └── [ 128 Mar  7 09:29]  styles
+│   │   │       ├── [ 667 Mar  7 09:29]  index.styl
+│   │   │       └── [ 189 Aug 31  2020]  palette.styl
+│   │   ├── [ 128 Mar  7 13:09]  guide
+│   │   │   ├── [  33 Mar  7 13:07]  index.md
+│   │   │   └── [ 165 Mar  7 13:09]  tree.md
+│   │   ├── [ 128 Mar  7 12:38]  health
+│   │   │   ├── [ 386 Mar  7 12:01]  cloud.md
+│   │   │   └── [ 369 Mar  7 12:38]  local.md
+│   │   ├── [ 261 Mar  7 05:47]  index.md
+│   │   └── [ 160 Mar  7 08:08]  setup
+│   │       ├── [ 518 Mar  7 05:28]  client.md
+│   │       ├── [  58 Mar  7 05:47]  index.md
+│   │       └── [ 518 Mar  7 05:28]  server.md
+│   └── [354K Mar  7 09:21]  yarn.lock
+├── [ 340 Mar  3 02:11]  install
+├── [ 34K Mar  2 06:07]  license
+├── [ 919 Mar  7 13:33]  package.json
+├── [  20 Mar  7 12:42]  readme.md
+├── [ 224 Mar  7 13:18]  scripts
+│   ├── [ 179 Mar  3 02:23]  client.sh
+│   ├── [ 177 Mar  3 02:23]  docs.sh
+│   ├── [ 179 Mar  3 02:23]  server.sh
+│   ├── [ 153 Mar  7 13:18]  update-client.sh
+│   └── [ 117 Mar  3 01:54]  update-server-doc.sh
+├── [ 480 Mar  7 05:35]  server
+│   ├── [ 206 Mar  3 23:29]  .env
+│   ├── [  90 Mar  3 00:34]  .env.example
+│   ├── [1.6K Mar  3 00:34]  .gitignore
+│   ├── [  38 Nov 26 19:01]  .npmrc
+│   ├── [  27 Nov 26 19:01]  .yarnrc
+│   ├── [  15 Mar  3 00:00]  Procfile
+│   ├── [ 160 Nov 26 19:01]  apps
+│   │   ├── [ 192 Mar  7 05:35]  config
+│   │   │   ├── [ 465 Mar  7 05:35]  database.config.mjs
+│   │   │   ├── [ 474 Mar  2 06:12]  env.config.mjs
+│   │   │   ├── [ 194 Mar  2 05:02]  package.config.mjs
+│   │   │   └── [ 396 Mar  7 05:35]  server.config.mjs
+│   │   ├── [  96 Mar  7 05:35]  core
+│   │   │   └── [2.2K Mar  7 05:35]  server.mjs
+│   │   └── [  96 Mar  7 05:35]  database
+│   │       └── [ 679 Mar  7 05:35]  mongoose.mjs
+│   ├── [  96 Mar  7 05:35]  bin
+│   │   └── [ 517 Mar  7 05:35]  www.mjs
+│   ├── [1.2K Mar  7 05:35]  package.json
+│   ├── [ 160 Mar  7 05:35]  posts
+│   │   ├── [4.1K Mar  7 05:35]  controller.mjs
+│   │   ├── [ 277 Mar  2 13:30]  model.mjs
+│   │   └── [ 647 Mar  7 05:35]  routes.mjs
+│   └── [ 63K Mar  5 18:06]  yarn.lock
+├── [1.2K Mar  3 01:57]  serverland
+├── [   0 Mar  7 13:33]  tree.txt
+├── [ 110 Mar  7 13:18]  update
+└── [ 605 Mar  7 08:56]  yarn.lock
+
+26 directories, 84 files
