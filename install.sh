@@ -1,8 +1,7 @@
 #!/bin/sh
 
 installPackage() {
-  if ! command -v yarn &> /dev/null
-  then
+  if ! command -v yarn &>/dev/null; then
     npm install
   else
     yarn install

@@ -9,7 +9,7 @@
     "server": "./scripts/server.sh",
     "client": "./scripts/client.sh",
     "docs": "./scripts/docs.sh",
-    "format": "prettier --write --check \"**/*.js\" \"**/*.jsx\" \"**/*.md\" \"**/*.css\" \"**/*.vue\"\n",
+    "format": "prettier --write --check \"**/*.js\" \"**/*.jsx\" \"**/*.md\" \"**/*.css\" \"**/*.vue\" \"**/*.sh\"\n",
     "format:check": "prettier --check \"**/*.js\" \"**/*.jsx\" \"**/*.md\" \"**/*.css\" \"**/*.vue\"\n",
     "git": "yarn run format && yarn run tree && ./update.sh",
     "initialize": "./install.sh",
@@ -22,5 +22,8 @@
   "dependencies": {
     "node-fetch": "^2.6.1",
     "prettier": "^2.2.1"
+  },
+  "devDependencies": {
+    "prettier-plugin-sh": "^0.6.0"
   }
 }

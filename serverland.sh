@@ -7,19 +7,19 @@ infos() {
   printf "Docs has started in port 3002"
 }
 
-client () {
+client() {
   cd ./client || exit
   yarn dev
   cd ..
 }
 
-server () {
+server() {
   cd ./server || exit
   yarn dev
   cd ..
 }
 
-docs () {
+docs() {
   cd ./docs || exit
   yarn dev
   cd ..
@@ -41,7 +41,7 @@ countdown() {
   sleep 1
 }
 
-killgroup(){
+killgroup() {
   echo killing...
   kill 0
 }
@@ -57,7 +57,8 @@ printf "=> Server will all apps paralleled, so don't pay attention to anything e
 printf "=> Apps will launch in ...\n"
 countdown
 
-
 trap killgroup SIGINT
-docs | tee ./logs/docs.log | sed -e 's/^/[Docs] /' & client | tee ./logs/client.log | sed -e 's/^/[Client] /' & server | tee ./logs/server.log | sed -e 's/^/[Server] /' & infos
-
+docs | tee ./logs/docs.log | sed -e 's/^/[Docs] /' &
+client | tee ./logs/client.log | sed -e 's/^/[Client] /' &
+server | tee ./logs/server.log | sed -e 's/^/[Server] /' &
+infos
