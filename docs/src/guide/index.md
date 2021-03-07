@@ -1,1 +1,1 @@
-# The App
+# Application
