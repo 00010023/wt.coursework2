@@ -16,8 +16,7 @@
     "all": "./serverland.sh",
     "tree": "./scripts/tree.sh",
     "cleanup": "./scripts/cleanup.sh",
-    "build": "./upload.sh",
-    "upload": "yarn run cleanup && yarn run "
+    "build": "./upload.sh"
   },
   "dependencies": {
     "node-fetch": "^2.6.1",
