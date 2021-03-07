@@ -1,6 +1,6 @@
 <template>
   <p class="demo">
-    <template v-if="loading">⚡️ Downloading tree map... </template>
+    <template v-if="loading"><pre>⚡️ Downloading tree map... </pre></template>
     <template v-else>
       <pre>{{ tree }}</pre>
     </template>
