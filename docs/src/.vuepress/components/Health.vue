@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import fetch from "node-fetch"
+import axios from "axios";
 export default {
   props: {
     host: {
@@ -27,10 +27,10 @@ export default {
   methods: {
     getStatus(link) {
       this.loading = true;
-      fetch(link, {
-        method: "GET",
-        timeout: 3000,
-      })
+      axios
+        .get(link, {
+          timeout: 1000,
+        })
         .then((res) => {
           if (res.status === 200) {
             this.loading = false;

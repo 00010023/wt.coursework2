@@ -19,6 +19,7 @@
     "vuepress": "^1.5.3"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "vuepress-theme-yuu": "^2.3.0",
     "webpack": "^5.24.3"
   },
