@@ -14,7 +14,7 @@
     "git": "[ -f ./tree ] && rm -rf tree fi && yarn run dir && ./update",
     "initialize": "./install",
     "all": "./serverland",
-    "dir": "tree -a -I 'node_modules|.next|yarn-error.log|dist' >> tree"
+    "dir": "tree -a -I 'node_modules|.next|yarn-error.log|dist' -o tree"
   },
   "dependencies": {
     "node-fetch": "^2.6.1",
