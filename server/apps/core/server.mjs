@@ -7,14 +7,14 @@ import cors from "cors";
 import http from "http";
 import express from "express";
 import enforce from "express-sslify";
-import env from "../config/env.config.js";
+import env from "../config/env.config.mjs";
 import bodyParser from "body-parser";
-import database from "../database/mongoose.js";
-import dbConfig from "../config/server.config.js";
-import packager from "../config/package.config.js";
+import database from "../database/mongoose.mjs";
+import dbConfig from "../config/server.config.mjs";
+import packager from "../config/package.config.mjs";
 
 // Routes
-import postRoutes from "../../posts/routes.js";
+import postRoutes from "../../posts/routes.mjs";
 
 // Create express app
 export const app = express();
@@ -25,7 +25,7 @@ export const launch = async () => {
     app.use(enforce.HTTPS({ trustProtoHeader: true }));
   }
 
-  // Parse apps/x-www.js-form-urlencoded
+  // Parse apps/x-www.mjs-form-urlencoded
   await app.use(bodyParser.urlencoded({ extended: true }));
 
   // Cors

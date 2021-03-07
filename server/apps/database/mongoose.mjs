@@ -1,6 +1,6 @@
 import colors from "colors";
 import mongoose from "mongoose";
-import database from "../config/database.config.js";
+import database from "../config/database.config.mjs";
 
 export default async () => {
   mongoose.Promise = global.Promise;

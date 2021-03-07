@@ -2,12 +2,12 @@
   "name": "serverland-server",
   "version": "3.5.0",
   "description": "Serverland - Genemator Server Manager.",
-  "main": "bin/www.js",
+  "main": "bin/www.mjs",
   "type": "module",
   "scripts": {
-    "start": "node bin/www.js",
+    "start": "node bin/www.mjs",
     "test": "yarn format:check",
-    "dev": "nodemon bin/www.js",
+    "dev": "nodemon bin/www.mjs",
     "update": "yarn"
   },
   "engines": {

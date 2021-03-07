@@ -1,4 +1,4 @@
-import * as posts from "./controller.js";
+import * as posts from "./controller.mjs";
 
 export default async function (app) {
   // Create a new Post

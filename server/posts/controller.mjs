@@ -3,7 +3,7 @@
  * @description Controller host of posts base
  */
 
-import Post from "./model.js";
+import Post from "./model.mjs";
 
 // Create and Save a new Post
 export const create = async (req, res) => {

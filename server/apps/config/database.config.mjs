@@ -5,7 +5,7 @@
  * mongodb with given url below
  */
 
-import env from "./env.config.js";
+import env from "./env.config.mjs";
 
 export default async () => {
   if (env.HOST === "heroku") return env.DB_HOST;

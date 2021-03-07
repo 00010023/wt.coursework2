@@ -19,7 +19,8 @@
     "vuepress": "^1.5.3"
   },
   "dependencies": {
-    "vuepress-theme-yuu": "^2.3.0"
+    "vuepress-theme-yuu": "^2.3.0",
+    "webpack": "^5.24.3"
   },
   "bugs": {
     "url": "https://github.com/00010023/wt.coursework2/issues"

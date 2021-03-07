@@ -5,8 +5,8 @@
  */
 
 // Loading up environment
-import "../apps/config/env.config.js";
-import * as server from "../apps/core/server.js";
+import "../apps/config/env.config.mjs";
+import * as server from "../apps/core/server.mjs";
 
 // Starting up an Express based application
 server

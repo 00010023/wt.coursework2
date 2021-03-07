@@ -1,4 +1,4 @@
-# Using Vue in Markdown
+# Server side
 
 ## Browser API Access Restrictions
 

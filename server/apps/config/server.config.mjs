@@ -5,7 +5,7 @@
  * preferred port
  */
 
-import env from "./env.config.js";
+import env from "./env.config.mjs";
 
 export default function () {
   if (env.HOST === "heroku") return env.PORT;

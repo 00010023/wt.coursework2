@@ -1,10 +1,9 @@
-const { title, description, repository } = require("../../package");
+const { title, description, homepage } = require("../../package");
 
 module.exports = {
   theme: "yuu",
   title: title,
   description: description,
-
   head: [
     ["meta", { name: "theme-color", content: "#000000" }],
     ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
@@ -22,44 +21,76 @@ module.exports = {
     logo: "https://genemator.me/favicon.png",
     searchPlaceholder: "Search...",
     smoothScroll: true,
-    repo: repository,
-    repoLabel: "Contribute!",
+    repo: homepage,
+    repoLabel: "Repo!",
     editLinks: true,
     docsDir: "src",
-    docsRepo: "genestatic/genedocs",
+    docsRepo: "00010023/wt.coursework2",
     editLinkText: "Contribute it!",
     lastUpdated: true,
     nav: [
       {
         text: "Home",
-        link: "https://wt.genemator.me",
-      },
-      {
-        text: "About",
-        link: "/about/",
+        link: "/",
       },
       {
         text: "Guide",
         link: "/guide/",
       },
       {
-        text: "Config",
-        link: "/config/",
+        text: "Setup",
+        link: "/setup/",
       },
       {
-        text: "Disclaimer",
-        link: "/disclaimer/",
+        text: "Health",
+        link: "/health/",
+      },
+      {
+        text: "Links",
+        items: [
+          {
+            text: "Cloud",
+            items: [
+              {
+                text: "Client",
+                link: "https://wt.genemator.me",
+                target: "_blank",
+              },
+              {
+                text: "Server",
+                link: "https://srv.genemator.me" + "/api/v1/posts",
+                target: "_blank",
+              },
+            ],
+          },
+          {
+            text: "Local",
+            items: [
+              {
+                text: "Client",
+                link: "http://localhost:3000",
+                target: "_blank",
+              },
+              {
+                text: "Server",
+                link: "http://localhost:3001" + "/api/v1/posts",
+                target: "_blank",
+              },
+            ],
+          },
+        ],
       },
     ],
     sidebar: {
-      "/guide/": [
+      "/setup/": [
         {
           title: "Guide",
           collapsable: false,
-          children: ["", "using-vue"],
+          children: ["", "client", "server"],
         },
       ],
     },
   },
   plugins: ["@vuepress/plugin-back-to-top", "@vuepress/plugin-medium-zoom"],
+  evergreen: true,
 };
