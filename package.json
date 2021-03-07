@@ -13,7 +13,8 @@
     "format:check": "prettier --check \"**/*.js\" \"**/*.jsx\" \"**/*.md\" \"**/*.css\" \"**/*.vue\"\n",
     "git": "./update",
     "initialize": "./install",
-    "all": "./serverland"
+    "all": "./serverland",
+    "dir": "tree -I 'node_modules|.next|yarn-error.log|dist' >> tree"
   },
   "dependencies": {
     "node-fetch": "^2.6.1",
