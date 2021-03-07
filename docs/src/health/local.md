@@ -1,6 +1,7 @@
 # Health Checker
 
-**In this page, you can check out health issues of locally running solutions...**
+**In this page, you can check out health issues of locally running
+solutions...**
 
 <hr/>
 

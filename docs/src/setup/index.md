@@ -1,4 +1,3 @@
 # The App
 
-This project was dedicated to
-<health-status/>
+This project was dedicated to <health-status/>
