@@ -42,12 +42,12 @@
 │   │   ├── [Mar  5 17:21]  emoji_util.js
 │   │   └── [Mar  5 16:38]  emojis.json
 │   └── [Mar  5 22:15]  yarn.lock
-├── [Mar  7 23:55]  docs
+├── [Mar  7 23:57]  docs
 │   ├── [Mar  7 05:39]  .gitignore
 │   ├── [Aug 31  2020]  .npmrc
 │   ├── [Aug 31  2020]  LICENSE
 │   ├── [Mar  3 00:37]  README.md
-│   ├── [Mar  7 23:55]  package.json
+│   ├── [Mar  7 23:57]  package.json
 │   ├── [Mar  7 08:07]  src
 │   │   ├── [Mar  7 23:52]  .vuepress
 │   │   │   ├── [Mar  7 23:35]  components
@@ -55,11 +55,9 @@
 │   │   │   │   └── [Mar  7 23:35]  Tree.vue
 │   │   │   ├── [Mar  7 13:37]  config.js
 │   │   │   ├── [Mar  3 00:37]  enhanceApp.js
-│   │   │   ├── [Mar  7 23:56]  public
-│   │   │   │   └── [Mar  7 23:55]  fonts
-│   │   │   │       └── [Dec 10  2017]  DreiFraktur.ttf
-│   │   │   └── [Mar  7 23:56]  styles
-│   │   │       ├── [Mar  7 23:56]  index.styl
+│   │   │   ├── [Mar  7 23:58]  public
+│   │   │   └── [Mar  7 23:58]  styles
+│   │   │       ├── [Mar  7 23:58]  index.styl
 │   │   │       └── [Aug 31  2020]  palette.styl
 │   │   ├── [Mar  7 23:40]  guide
 │   │   │   ├── [Mar  7 13:39]  index.md
@@ -111,9 +109,9 @@
 │   │   └── [Mar  7 05:35]  routes.mjs
 │   └── [Mar  5 18:06]  yarn.lock
 ├── [Mar  7 23:18]  serverland.sh
-├── [Mar  7 23:56]  tree.txt
+├── [Mar  7 23:58]  tree.txt
 ├── [Mar  7 13:18]  update.sh
 ├── [Mar  7 23:18]  upload.sh
 └── [Mar  7 23:18]  yarn.lock
 
-28 directories, 88 files
+27 directories, 87 files
