@@ -23,7 +23,7 @@ module.exports = {
     smoothScroll: true,
     repo: homepage,
     repoLabel: "Repo!",
-    editLinks: true,
+    editLinks: false,
     docsDir: "src",
     docsRepo: "00010023/wt.coursework2",
     editLinkText: "Contribute it!",

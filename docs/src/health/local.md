@@ -16,4 +16,4 @@
 
 <hr/>
 
-For cloud hosted one, refer to that [link](/health/index.md)
+For cloud hosted one, refer to that [link](/health/cloud.md)
