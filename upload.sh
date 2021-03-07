@@ -4,6 +4,7 @@ cd ..
 zip -r 00010023WT ./wt.coursework2 -x \
         ./wt.coursework2/.git/\* \
         ./wt.coursework2/.idea/\* \
+        ./wt.coursework2/.github/\* \
         ./wt.coursework2/node_modules/\* \
         ./wt.coursework2/docs/node_modules/\* \
         ./wt.coursework2/server/node_modules/\* \

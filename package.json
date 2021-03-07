@@ -11,7 +11,7 @@
     "docs": "./scripts/docs.sh",
     "format": "prettier --write --check \"**/*.js\" \"**/*.jsx\" \"**/*.md\" \"**/*.css\" \"**/*.vue\"\n",
     "format:check": "prettier --check \"**/*.js\" \"**/*.jsx\" \"**/*.md\" \"**/*.css\" \"**/*.vue\"\n",
-    "git": "yarn run tree && ./update.sh",
+    "git": "yarn run format && yarn run tree && ./update.sh",
     "initialize": "./install.sh",
     "all": "./serverland.sh",
     "tree": "./scripts/tree.sh",
