@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import fetch from "node-fetch"
 export default {
   props: {
     host: {
