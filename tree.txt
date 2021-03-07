@@ -2,7 +2,7 @@
 ├── [Mar  2 23:47]  .github
 │   └── [Nov 26 19:01]  workflows
 │       └── [Nov 26 19:01]  test.yml
-├── [Mar  3 01:39]  .gitignore
+├── [Mar  7 23:04]  .gitignore
 ├── [Mar  7 11:55]  .prettierignore
 ├── [Mar  7 07:29]  client
 │   ├── [Mar  5 18:30]  .env.local
@@ -74,12 +74,12 @@
 ├── [Mar  2 06:07]  license
 ├── [Mar  7 22:48]  package.json
 ├── [Mar  7 12:42]  readme.md
-├── [Mar  7 21:47]  scripts
+├── [Mar  7 22:52]  scripts
 │   ├── [Mar  7 21:47]  cleanup.sh
 │   ├── [Mar  3 02:23]  client.sh
 │   ├── [Mar  3 02:23]  docs.sh
 │   ├── [Mar  3 02:23]  server.sh
-│   ├── [Mar  7 21:20]  tree.sh
+│   ├── [Mar  7 22:52]  tree.sh
 │   ├── [Mar  7 13:18]  update-client.sh
 │   └── [Mar  3 01:54]  update-server-doc.sh
 ├── [Mar  7 05:35]  server
@@ -108,10 +108,9 @@
 │   │   └── [Mar  7 05:35]  routes.mjs
 │   └── [Mar  5 18:06]  yarn.lock
 ├── [Mar  3 01:57]  serverland.sh
-├── [Mar  7 22:48]  tree.txt
+├── [Mar  7 23:04]  tree.txt
 ├── [Mar  7 13:18]  update.sh
-├── [Mar  7 22:42]  upload
-├── [Mar  7 22:42]  upload.sh
+├── [Mar  7 23:02]  upload.sh
 └── [Mar  7 08:56]  yarn.lock
 
-27 directories, 87 files
+26 directories, 87 files

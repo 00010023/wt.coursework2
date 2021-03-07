@@ -1,7 +1,7 @@
 #!/bin/sh
 cd "$(dirname "$0")" || exit
 cd ..
-zip -r 00010023WT ./wt.coursework2
+zip -r 00010023WT ./wt.coursework2 -x *.git* */node_modules/**\* */.idea/**\* */.next/**\* *.DS_Store*
 cd ./wt.coursework2 || exit
 [ ! -d "./upload" ] && mkdir upload
 BACKUP=$(date +'%m-%d-%Y')
