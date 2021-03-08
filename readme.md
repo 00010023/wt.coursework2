@@ -24,7 +24,7 @@ on _cocky Windows Operating System_. Also, dear staff, please, don't take my
 "Mr. Noob" too serious. By saying that I was addressing to another WIUT BIS
 students.
 
-### For cloud solutions 🌐
+### For cloud solutions ☁️
 
 - Open the website [https://doc.genemator.me](https://doc.genemator.me)
 
