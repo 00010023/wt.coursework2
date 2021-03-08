@@ -61,8 +61,8 @@
 │   │   │   ├── [Mar  8 21:59]  public
 │   │   │   │   └── [Mar  8 21:58]  fonts
 │   │   │   │       └── [Jan 26  2020]  JetBrains.ttf
-│   │   │   └── [Mar  8 21:58]  styles
-│   │   │       ├── [Mar  8 21:58]  index.styl
+│   │   │   └── [Mar  8 21:59]  styles
+│   │   │       ├── [Mar  8 21:59]  index.styl
 │   │   │       └── [Aug 31  2020]  palette.styl
 │   │   ├── [Mar  8 21:13]  about
 │   │   │   ├── [Mar  8 00:46]  docs.md
