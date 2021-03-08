@@ -1,6 +1,16 @@
-# Serverland
+<p align="center">
+    <h1 align="center">Welcome to my coursework ladies and gentlemen!</h1>
+</p>
 
-## Disclaimer
+<a href="https://doc.genemator.me">
+    <img src="./assets/preview.png" width="100%" alt="Doc Station Banner">
+</a>
+
+---
+
+<p align="center">
+    <h3 align="center">Disclaimer!</h3>
+</p>
 
 Dear staff, I know that you're bored with scriptkiddies' coursework. Now, let me
 take your time more joyful and in a way more interesting. All you have to do is
