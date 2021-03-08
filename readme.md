@@ -25,7 +25,7 @@ was addressing to another WIUT BIS students.
 
 ### For cloud solutions 🌐
 
-Open the website [https://doc.genemator.me](https://doc.genemator.me)
+- Open the website [https://doc.genemator.me](https://doc.genemator.me)
 
 ### For local instances 💻
 
