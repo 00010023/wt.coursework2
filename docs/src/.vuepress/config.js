@@ -99,7 +99,7 @@ module.exports = {
         {
           title: "The Coursework",
           collapsable: false,
-          children: ["", "docs", "tree"],
+          children: ["", "docs", "tree", "end"],
         },
       ],
       "/setup/": [
