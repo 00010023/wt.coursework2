@@ -1,5 +1,5 @@
 <p align="center">
-    <h1 align="center">Welcome to my coursework ladies and gentlemen!</h1>
+    <h1 align="center">Welcome to my coursework ladies and gentlemen! 🧐</h1>
 </p>
 
 <a href="https://doc.genemator.me">
@@ -9,7 +9,7 @@
 ---
 
 <p align="center">
-    <h3 align="center">Disclaimer!</h3>
+    <h3 align="center">⚠️ Disclaimer!</h3>
 </p>
 
 Dear staff, I know that you're bored with scriptkiddies' coursework. Now, let me
@@ -23,14 +23,14 @@ Linux command line interface won't work on _cocky Windows Operating System_.
 Also, dear staff, please, don't take my "Mr. Noob" too serious. By saying that I
 was addressing to another WIUT BIS students.
 
-### For cloud solutions
+### For cloud solutions 🌐
 
 Open the website [https://doc.genemator.me](https://doc.genemator.me)
 
-### For local instances
+### For local instances 💻
 
-1. Spawn a terminal session in docs directory inside root path of the project
-2. Run `yarn install` or `npm install` regarding your preferred package manager.
-3. Run `yarn dev` or `npm run dev` (up to your preference).
-4. Wait for a couple of minutes
-5. Open browser and enter `http://localhost:3002`
+- Spawn a terminal session in docs directory inside root path of the project
+- Run `yarn install` or `npm install` regarding your preferred package manager.
+- Run `yarn dev` or `npm run dev` (up to your preference).
+- Wait for a couple of minutes
+- Open browser and enter `http://localhost:3002`
