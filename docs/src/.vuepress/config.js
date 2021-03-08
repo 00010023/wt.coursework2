@@ -121,7 +121,8 @@ module.exports = {
           'div[class*="language-"] pre',
           'div[class*="aside-code"] aside',
         ],
-        copyMessage: "Copied successfully... Now execute it!",
+        copyMessage:
+          "Congrats Mr.Noob... You have successfully copied the command!",
         duration: 3000,
         showInMobile: false,
       },

@@ -1,15 +1,24 @@
 # Client side
 
-## Browser API Access Restrictions
+## Which framework does stands for my coursework?
 
-Because VuePress applications are server-rendered in Node.js when generating
-static builds, any Vue usage must conform to the
-[universal code requirements](https://ssr.vuejs.org/en/universal.html). In
-short, make sure to only access Browser / DOM APIs in `beforeMount` or `mounted`
-hooks.
+Actually, for the client side of the application, I used a framework namely
+Next.js which is way more convenient compared to another frameworks. I could do
+it SSR and implement all front things inside express front end renderer but, my
+creativeness wouldn't let me do this as a senior developer.
 
-If you are using or demoing components that are not SSR friendly (for example
-containing custom directives), you can wrap them inside the built-in
-`<ClientOnly>` component:
+## How to run the application (a step-by-step instructions)
 
-##
+### Windows users:
+
+Hola Windows users! I guess 80% of my audience is reading windows based guides,
+so I'll try to explain everything in a nutshell.
+
+I assume that you have already cloned my project. If you didn't, just spawn a
+terminal somewhere then execute the following command:
+
+```shell
+git clone https://github.com/00010023/wt.coursework2.git
+```
+
+### UNIX Typo / GNU Linux users

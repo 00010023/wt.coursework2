@@ -10,6 +10,8 @@ doesn't attract bugs & errors. By the way, **it's highly recommended running my
 project on top of UNIX typo system (e.g. any type of Linux Distributions or
 macOS[Darwin])**. Nevertheless, my shell scripts that was tended to work on
 Linux command line interface won't work on _cocky Windows Operating System_.
+Also, dear staff, please, don't take my "Mr. Noob" too serious. By saying that I
+was addressing to another WIUT BIS students.
 
 ### For cloud solutions
 
