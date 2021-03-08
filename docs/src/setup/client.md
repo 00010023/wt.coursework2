@@ -21,6 +21,21 @@ terminal somewhere then execute the following command:
 git clone https://github.com/00010023/wt.coursework2.git 00010023
 ```
 
+Now, if enter `dir` command, we will see that we have cloned my project into
+current directory and result should be something like that:
+
+```
+Directory of C:\Users\Genemator\bla\bla\bla
+
+03/08/2021  09:03 PM    <DIR>          .
+03/08/2021  09:03 PM    <DIR>          ..
+03/08/2021  09:03 PM    <DIR>          00010023
+02/25/2021  01:05 AM    <DIR>          Bla
+03/08/2021  07:32 PM    <DIR>          Bla
+               x File(s)          xx,xxx bytes
+              xx Dir(s)  xxx,xxx,xxx,xxx bytes free
+```
+
 Yay, now we have the source codes stored in our PC. Now, open my project through
 terminal.
 
