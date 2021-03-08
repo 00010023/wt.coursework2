@@ -58,7 +58,7 @@
 │   │   │   │   └── [Mar  7 23:35]  Tree.vue
 │   │   │   ├── [Mar  8 16:43]  config.js
 │   │   │   ├── [Mar  3 00:37]  enhanceApp.js
-│   │   │   ├── [Mar  8 20:16]  public
+│   │   │   ├── [Mar  8 20:20]  public
 │   │   │   └── [Mar  7 23:58]  styles
 │   │   │       ├── [Mar  7 23:58]  index.styl
 │   │   │       └── [Aug 31  2020]  palette.styl
@@ -80,13 +80,13 @@
 ├── [Mar  2 06:07]  license
 ├── [Mar  7 23:23]  package.json
 ├── [Mar  8 18:33]  readme.md
-├── [Mar  7 23:28]  scripts
+├── [Mar  8 20:20]  scripts
 │   ├── [Mar  7 21:47]  cleanup.sh
 │   ├── [Mar  7 23:18]  client.sh
 │   ├── [Mar  7 23:18]  docs.sh
 │   ├── [Mar  7 23:18]  server.sh
 │   ├── [Mar  7 23:28]  tree.sh
-│   ├── [Mar  7 13:18]  update-client.sh
+│   ├── [Mar  8 20:20]  update-client.sh
 │   └── [Mar  3 01:54]  update-server-doc.sh
 ├── [Mar  7 05:35]  server
 │   ├── [Mar  3 23:29]  .env
@@ -114,7 +114,7 @@
 │   │   └── [Mar  7 05:35]  routes.mjs
 │   └── [Mar  5 18:06]  yarn.lock
 ├── [Mar  7 23:18]  serverland.sh
-├── [Mar  8 20:16]  tree.txt
+├── [Mar  8 20:20]  tree.txt
 ├── [Mar  7 13:18]  update.sh
 ├── [Mar  7 23:18]  upload.sh
 └── [Mar  7 23:18]  yarn.lock
