@@ -91,8 +91,8 @@ all you have to do is run:
 
 ```shell
 # If you have npm
-npm run docs
+npm run client
 
 # If you have yarn
-yarn docs
+yarn client
 ```

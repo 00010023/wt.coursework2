@@ -7,7 +7,7 @@
 ├── [Mar  8 00:46]  .prettierrc.json
 ├── [Mar  8 18:25]  assets
 │   └── [Mar  8 18:23]  preview.png
-├── [Mar  7 07:29]  client
+├── [Mar  8 23:11]  client
 │   ├── [Mar  5 18:30]  .env.local
 │   ├── [Mar  7 07:29]  .gitignore
 │   ├── [Mar  6 04:53]  components
@@ -58,7 +58,7 @@
 │   │   │   │   └── [Mar  7 23:35]  Tree.vue
 │   │   │   ├── [Mar  8 21:13]  config.js
 │   │   │   ├── [Mar  3 00:37]  enhanceApp.js
-│   │   │   ├── [Mar  8 22:13]  public
+│   │   │   ├── [Mar  8 23:16]  public
 │   │   │   └── [Mar  8 22:05]  styles
 │   │   │       ├── [Mar  8 22:05]  index.styl
 │   │   │       └── [Aug 31  2020]  palette.styl
@@ -72,8 +72,8 @@
 │   │   │   ├── [Mar  8 00:46]  local.md
 │   │   │   └── [Mar  8 00:55]  struct.md
 │   │   ├── [Mar  8 21:17]  index.md
-│   │   └── [Mar  8 22:12]  setup
-│   │       ├── [Mar  8 22:13]  client.md
+│   │   └── [Mar  8 23:08]  setup
+│   │       ├── [Mar  8 23:08]  client.md
 │   │       ├── [Mar  8 22:11]  img.png
 │   │       ├── [Mar  8 16:47]  index.md
 │   │       └── [Mar  8 00:46]  server.md
@@ -82,11 +82,11 @@
 ├── [Mar  2 06:07]  license
 ├── [Mar  8 20:55]  package.json
 ├── [Mar  8 18:33]  readme.md
-├── [Mar  8 20:34]  scripts
+├── [Mar  8 23:15]  scripts
 │   ├── [Mar  7 21:47]  cleanup.sh
-│   ├── [Mar  7 23:18]  client.sh
-│   ├── [Mar  7 23:18]  docs.sh
-│   ├── [Mar  7 23:18]  server.sh
+│   ├── [Mar  8 23:14]  client.sh
+│   ├── [Mar  8 23:15]  docs.sh
+│   ├── [Mar  8 23:15]  server.sh
 │   ├── [Mar  7 23:28]  tree.sh
 │   ├── [Mar  8 20:34]  update-client.sh
 │   └── [Mar  3 01:54]  update-server-doc.sh
@@ -116,7 +116,7 @@
 │   │   └── [Mar  7 05:35]  routes.mjs
 │   └── [Mar  5 18:06]  yarn.lock
 ├── [Mar  7 23:18]  serverland.sh
-├── [Mar  8 22:13]  tree.txt
+├── [Mar  8 23:16]  tree.txt
 ├── [Mar  7 13:18]  update.sh
 ├── [Mar  7 23:18]  upload.sh
 └── [Mar  7 23:18]  yarn.lock
