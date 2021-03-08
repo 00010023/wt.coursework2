@@ -53,11 +53,12 @@ So firstly, if you have cloned my application, skip this step. If you don't,
 then do it by executing this:
 
 ```shell
-git clone https://github.com/00010023/wt.coursework2.git 00010023
+git clone https://github.com/00010023/wt.coursework2.git 00010023 && cd 00010023
 ```
 
-Now, let's open my project on Terminal and list all my files (in my case, I use
-`ls -la`). Approximately, it should look like this:
+Now, for those who already downloaded my project, just spawn a terminal session
+inside my project. OK, let's list all my files (in my case, I use `ls -la`).
+Approximately, it should look like this:
 
 ```
 drwxr-xr-x genemator staff 736 B  Mon Mar  8 21:33:11 2021  .
@@ -83,4 +84,15 @@ drwxr-xr-x genemator staff 480 B  Sun Mar  7 05:35:14 2021  server
 .rwxr-xr-x genemator staff 110 B  Sun Mar  7 13:18:42 2021  update.sh
 .rwxr-xr-x genemator staff 623 B  Sun Mar  7 23:18:56 2021  upload.sh
 .rw-r--r-- genemator staff 1.2 KB Sun Mar  7 23:18:33 2021  yarn.lock
+```
+
+I've already wrote a few shell scripts that will ease our next procedures, so
+all you have to do is run:
+
+```shell
+# If you have npm
+npm run docs
+
+# If you have yarn
+yarn docs
 ```
