@@ -7,7 +7,7 @@ Next.js which is way more convenient compared to another frameworks. I could do
 it SSR and implement all front things inside express front end renderer but, my
 creativeness wouldn't let me do this as a senior developer.
 
-## How to run the application (a step-by-step instructions)
+## How to run the application (a step-by-step noob included instructions)
 
 ### Windows users:
 

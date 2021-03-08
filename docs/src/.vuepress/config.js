@@ -34,8 +34,8 @@ module.exports = {
         link: "/",
       },
       {
-        text: "Guide",
-        link: "/guide/",
+        text: "About",
+        link: "/about/",
       },
       {
         text: "Setup",
@@ -95,7 +95,7 @@ module.exports = {
       },
     ],
     sidebar: {
-      "/guide/": [
+      "/about/": [
         {
           title: "The Coursework",
           collapsable: false,
