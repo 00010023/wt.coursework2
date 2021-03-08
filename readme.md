@@ -1,5 +1,5 @@
 <p align="center">
-    <h1 align="center">Welcome to my coursework ladies and gentlemen! 🧐</h1>
+    <h1 align="center">Welcome to my coursework ladies and gentlemen! 🤵🏻‍♂️</h1>
 </p>
 
 <a href="https://doc.genemator.me">
@@ -9,7 +9,7 @@
 ---
 
 <p align="center">
-    <h3 align="center">⚠️ Disclaimer!</h3>
+    <h3 align="center">⚠️ Disclaimer! ⚠️</h3>
 </p>
 
 Dear staff, I know that you're bored with scriptkiddies' coursework. Now, let me
