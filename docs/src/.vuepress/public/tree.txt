@@ -58,7 +58,7 @@
 │   │   │   │   └── [Mar  7 23:35]  Tree.vue
 │   │   │   ├── [Mar  8 21:13]  config.js
 │   │   │   ├── [Mar  3 00:37]  enhanceApp.js
-│   │   │   ├── [Mar  8 23:16]  public
+│   │   │   ├── [Mar  9 03:04]  public
 │   │   │   └── [Mar  8 22:05]  styles
 │   │   │       ├── [Mar  8 22:05]  index.styl
 │   │   │       └── [Aug 31  2020]  palette.styl
@@ -72,9 +72,8 @@
 │   │   │   ├── [Mar  8 00:46]  local.md
 │   │   │   └── [Mar  8 00:55]  struct.md
 │   │   ├── [Mar  8 21:17]  index.md
-│   │   └── [Mar  8 23:08]  setup
+│   │   └── [Mar  9 01:58]  setup
 │   │       ├── [Mar  8 23:08]  client.md
-│   │       ├── [Mar  8 22:11]  img.png
 │   │       ├── [Mar  8 16:47]  index.md
 │   │       └── [Mar  8 00:46]  server.md
 │   └── [Mar  7 09:21]  yarn.lock
@@ -116,9 +115,9 @@
 │   │   └── [Mar  7 05:35]  routes.mjs
 │   └── [Mar  5 18:06]  yarn.lock
 ├── [Mar  7 23:18]  serverland.sh
-├── [Mar  8 23:16]  tree.txt
+├── [Mar  9 03:04]  tree.txt
 ├── [Mar  7 13:18]  update.sh
 ├── [Mar  7 23:18]  upload.sh
 └── [Mar  7 23:18]  yarn.lock
 
-28 directories, 93 files
+28 directories, 92 files
