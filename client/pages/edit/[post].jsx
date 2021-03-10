@@ -211,7 +211,7 @@ export async function getServerSideProps(context) {
     };
   });
 
-  if (posts.code !== 200) {
+  if (post.code !== 200) {
     return {
       notFound: true,
     };
