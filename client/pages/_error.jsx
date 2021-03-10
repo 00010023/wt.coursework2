@@ -22,7 +22,7 @@ export default function CustomError({ documentation, statusCode }) {
   return (
     <>
       <Head>
-        <title>Oopsie, 50x! | Genemator's</title>
+        <title>Oopsie, 50x! | Gendy's</title>
         <meta property="og:title" content="404 Whoopie!" />
         <meta
           property="og:description"

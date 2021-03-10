@@ -11,7 +11,7 @@ const PostsIndexPage = ({ posts, documentation }) => {
   return (
     <>
       <Head>
-        <title>Posts | Genemator's</title>
+        <title>Posts | Gendy's</title>
         <meta property="og:title" content="Page where you can list posts" />
         <meta
           property="og:description"

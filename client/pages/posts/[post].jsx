@@ -48,7 +48,7 @@ const NewsPostPage = ({ post, server, documentation }) => {
   return (
     <>
       <Head>
-        <title>{post.title} | Genemator's</title>
+        <title>{post.title} | Gendy's</title>
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.snippet} />
       </Head>

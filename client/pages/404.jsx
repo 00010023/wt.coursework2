@@ -22,7 +22,7 @@ export default function Custom404({ documentation }) {
   return (
     <>
       <Head>
-        <title>Oopsie, 404! | Genemator's</title>
+        <title>Oopsie, 404! | Gendy's</title>
         <meta property="og:title" content="404 Whoopie!" />
         <meta
           property="og:description"

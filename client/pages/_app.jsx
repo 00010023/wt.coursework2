@@ -29,7 +29,7 @@ class MyApp extends App {
             content="https://genemator.me/preview.png"
           />
           <meta property="og:site_name" content="Serverland" />
-          <title>Serverland's Portfolio Website</title>
+          <title>Gendy's Portfolio Website</title>
         </Head>
         <Component {...pageProps} />
       </div>

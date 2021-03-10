@@ -77,7 +77,7 @@ const NewPostPage = ({ server, documentation }) => {
   return (
     <>
       <Head>
-        <title>Create a post | Genemator's</title>
+        <title>Create a post | Gendy's</title>
         <meta property="og:title" content="Create A Post" />
         <meta
           property="og:description"

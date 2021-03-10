@@ -9,7 +9,7 @@ const Home = ({ documentation }) => {
   return (
     <>
       <Head>
-        <title>Home | Serverland</title>
+        <title>Home | Gendy's</title>
         <meta property="og:title" content="Welcome to Serverland" />
         <meta
           property="og:description"
