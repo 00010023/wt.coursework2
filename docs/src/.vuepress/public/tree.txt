@@ -24,8 +24,8 @@
 │   │   ├── [Mar  6 00:15]  _app.jsx
 │   │   ├── [Mar  2 14:03]  _document.jsx
 │   │   ├── [Mar  6 06:41]  _error.jsx
-│   │   ├── [Mar 11 02:44]  edit
-│   │   │   └── [Mar 11 02:44]  [post].jsx
+│   │   ├── [Mar 11 03:03]  edit
+│   │   │   └── [Mar 11 03:03]  [post].jsx
 │   │   ├── [Mar  6 04:32]  index.jsx
 │   │   ├── [Mar  6 05:33]  new.jsx
 │   │   └── [Mar  6 18:16]  posts
@@ -58,7 +58,7 @@
 │   │   │   │   └── [Mar  7 23:35]  Tree.vue
 │   │   │   ├── [Mar  8 21:13]  config.js
 │   │   │   ├── [Mar  3 00:37]  enhanceApp.js
-│   │   │   ├── [Mar 11 02:44]  public
+│   │   │   ├── [Mar 11 03:04]  public
 │   │   │   └── [Mar  8 22:05]  styles
 │   │   │       ├── [Mar  8 22:05]  index.styl
 │   │   │       └── [Aug 31  2020]  palette.styl
@@ -115,7 +115,7 @@
 │   │   └── [Mar  7 05:35]  routes.mjs
 │   └── [Mar  5 18:06]  yarn.lock
 ├── [Mar  7 23:18]  serverland.sh
-├── [Mar 11 02:44]  tree.txt
+├── [Mar 11 03:04]  tree.txt
 ├── [Mar  7 13:18]  update.sh
 ├── [Mar  7 23:18]  upload.sh
 └── [Mar  7 23:18]  yarn.lock

@@ -114,7 +114,7 @@ const NewsPostPage = ({ post, server, documentation }) => {
         </Link>
         <div className="max-w-screen-lg mx-auto px-4 sm:px-6 md:px-8 mt-8">
           <label htmlFor="query" className="font-medium">
-            Title
+            Title {post.title}
           </label>
           <input
             id="title"
@@ -216,9 +216,10 @@ export async function getServerSideProps(context) {
       notFound: true,
     };
   }
+
   return {
     props: {
-      post,
+      post: post.result,
       server,
       documentation,
     },
