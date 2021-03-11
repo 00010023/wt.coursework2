@@ -34,8 +34,8 @@ class MyApp extends App {
         </Head>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem={true}
+          defaultTheme="light"
+          enableSystem={false}
         >
           <Component {...pageProps} />
         </ThemeProvider>
@@ -45,3 +45,7 @@ class MyApp extends App {
 }
 
 export default MyApp;
+
+/**
+ *
+ */

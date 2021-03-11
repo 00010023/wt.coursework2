@@ -16,6 +16,10 @@ const Header = ({ subtitle, docsUrl }) => {
   }, []);
   const switchTheme = () => {
     if (isMounted) {
+      document.documentElement.setAttribute(
+        "data-theme",
+        theme === "light" ? "dark" : "light"
+      );
       setTheme(theme === "light" ? "dark" : "light");
     }
   };
