@@ -86,7 +86,6 @@ const PostsIndexPage = ({ posts, documentation }) => {
 export const getServerSideProps = async () => {
   const documentation = process.env.DOCUMENTATION;
   const posts = await fetch(server + "/api/v1/posts/").then(async (res) => {
-    await console.log(res.status);
     return {
       code: res.status,
       result: await res.json(),

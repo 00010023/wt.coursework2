@@ -5,6 +5,11 @@
   --markdown-kbd-border: #262628;
   --markdown-kbd-box-shadow: #37393b;
   --markdown-hr-border-bottom-color: #1a1a1a;
+  --markdown-kbd-color: #444d56;
+  --markdown-kbd-background-color2: #fafbfc;
+  --markdown-kbd-border2: #d1d5da;
+  --markdown-kbd-box-shadow2: #d1d5da;
+  --markdown-hr-background-color: #e1e4e8;
 }
 
 [data-theme="dark"] {
@@ -14,6 +19,12 @@
   --markdown-kbd-border: #d5d5de;
   --markdown-kbd-box-shadow: #c7d0d6;
   --markdown-hr-border-bottom-color: #e9e9e9;
+  --markdown-kbd-color: #a1b5ca;
+  --markdown-kbd-background-color2: #0c0c0c;
+  --markdown-kbd-border2: #3a3b3c;
+  --markdown-kbd-box-shadow2: #333435;
+  --markdown-hr-background-color: #252526;
+
 }
 
 .markdown .octicon {
@@ -340,12 +351,12 @@ object {
   padding: 3px 5px;
   font: 11px SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
   line-height: 10px;
-  color: #444d56;
+  color: var(--markdown-kbd-color);
   vertical-align: middle;
-  background-color: #fafbfc;
-  border: 1px solid #d1d5da;
+  background-color: var(--markdown-kbd-background-color2);
+  border: 1px solid var(--markdown-kbd-border2);
   border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #d1d5da;
+  box-shadow: inset 0 -1px 0 var(--markdown-kbd-box-shadow2);
 }
 
 .markdown:after,
@@ -387,7 +398,7 @@ object {
   height: 0.25em;
   padding: 0;
   margin: 24px 0;
-  background-color: #e1e4e8;
+  background-color: var(--markdown-hr-background-color);
   border: 0;
 }
 
