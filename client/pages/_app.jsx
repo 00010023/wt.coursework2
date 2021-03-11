@@ -6,7 +6,7 @@ import "../styles/ngprogress.css";
 import Router from "next/router";
 import NProgress from "nprogress";
 import Head from "next/head";
-import { ThemeProvider } from "next-themes";
+import { ThemeProvider, useTheme } from "next-themes";
 
 NProgress.configure({
   showSpinner: false,
