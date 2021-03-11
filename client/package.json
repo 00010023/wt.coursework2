@@ -9,11 +9,13 @@
   },
   "author": "Geno Ferollo <sakhib.orzklv@icloud.com>",
   "dependencies": {
+    "@tailwindcss/typography": "^0.2.0",
     "@tailwindcss/ui": "^0.7.2",
     "autoprefixer": "^10.0.4",
     "dompurify": "^2.2.6",
     "marked": "^2.0.1",
     "next": "latest",
+    "next-themes": "^0.0.12",
     "nprogress": "^0.2.0",
     "postcss": "^8.1.10",
     "prism-react-renderer": "^1.2.0",

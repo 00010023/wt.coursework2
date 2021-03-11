@@ -1,6 +1,11 @@
 const defaultTheme = require("tailwindcss/defaultTheme"); // eslint-disable-line
 
 module.exports = {
+  darkMode: "class",
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
+  },
   theme: {
     fontFamily: {
       mono: [
@@ -21,9 +26,6 @@ module.exports = {
         72: "18rem",
       },
     },
-  },
-  variants: {
-    backgroundColor: ["responsive", "hover", "focus", "active"],
   },
   plugins: [require("@tailwindcss/ui"), require("tailwindcss-hyphens")],
   purge: {

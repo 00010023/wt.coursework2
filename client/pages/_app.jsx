@@ -6,6 +6,7 @@ import "../styles/ngprogress.css";
 import Router from "next/router";
 import NProgress from "nprogress";
 import Head from "next/head";
+import { ThemeProvider } from "next-themes";
 
 NProgress.configure({
   showSpinner: false,
@@ -31,7 +32,13 @@ class MyApp extends App {
           <meta property="og:site_name" content="Serverland" />
           <title>Gendy's Portfolio Website</title>
         </Head>
-        <Component {...pageProps} />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem={true}
+        >
+          <Component {...pageProps} />
+        </ThemeProvider>
       </div>
     );
   }

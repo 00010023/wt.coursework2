@@ -14,7 +14,6 @@ export default function Custom404({ documentation }) {
     "Ohayo... Sayonara...",
     "Stop it, get some drink!",
     "IT'S TIME TO STOP OKAY?!",
-    "Surprise motherfathers!",
   ];
   const possibilities = Math.floor(Math.random() * phrases.length);
   const choice = phrases[possibilities];
@@ -33,19 +32,19 @@ export default function Custom404({ documentation }) {
       <Notification news="This blog app is dedicated to fulfill WIUT's requirements" />
       <div className="h-auto">
         <div className="flex mb-4 justify-center mt-64">
-          <div className="text-black text-center text-center xl:text-6xl lg:text-5xl text-4xl border rounded hover:bg-black hover:text-white">
+          <div className="text-black dark:text-white text-center text-center xl:text-6xl lg:text-5xl text-4xl border rounded hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black">
             404
           </div>
         </div>
         <div className="flex mb-4 justify-center">
-          <div className="text-black text-center xl:text-3xl lg:text-2xl text-1xl">
+          <div className="text-black dark:text-white text-center xl:text-3xl lg:text-2xl text-1xl">
             {choice}
           </div>
         </div>
         <div className="flex mb-4 justify-center mb-64">
           <a
             onClick={() => Router.back()}
-            className="text-black text-center xl:text-3xl lg:text-2xl text-1xl hover:underline cursor-pointer"
+            className="text-black dark:text-white text-center xl:text-3xl lg:text-2xl text-1xl hover:underline cursor-pointer"
           >
             {"<-"} Go back to git stage 🖤
           </a>

@@ -1,19 +1,30 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Transition from "./Transition";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 
 const Header = ({ subtitle, docsUrl }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const path = useRouter().pathname;
   const documentation = docsUrl;
+  const [isMounted, setIsMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+  const switchTheme = () => {
+    if (isMounted) {
+      setTheme(theme === "light" ? "dark" : "light");
+    }
+  };
 
   const homeDetectMenu = () => {
     if (path !== "/") {
       return (
         <Link href="/">
-          <a className="text-base leading-6 font-medium text-black hover:text-gray-700 focus:outline-none focus:text-gray-400 transition ease-in-out duration-150">
+          <a className="text-base leading-6 font-medium text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-200 focus:outline-none focus:text-gray-400 dark:focus:text-gray-600 transition ease-in-out duration-150">
             Home
           </a>
         </Link>
@@ -25,7 +36,7 @@ const Header = ({ subtitle, docsUrl }) => {
     if (path !== "/") {
       return (
         <Link href="/">
-          <a className="-m-3 mt-3 p-3 flex items-center space-x-3 rounded-md text-black hover:bg-black hover:text-white transition ease-in-out duration-150">
+          <a className="-m-3 mt-3 p-3 flex items-center space-x-3 rounded-md text-black hover:bg-black hover:text-white dark:text-white dark:hover:bg-white dark:hover:text-black transition ease-in-out duration-150">
             <svg
               className="flex-shrink-0 h-6 w-6"
               fill="none"
@@ -47,15 +58,17 @@ const Header = ({ subtitle, docsUrl }) => {
   };
 
   return (
-    <div className="relative bg-white">
+    <div className="relative bg-white dark:bg-black">
       <div className="mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center border-b border-gray-800 py-6 md:justify-start md:space-x-10">
+        <div className="flex justify-between items-center border-b border-gray-800 dark:border-gray-50 py-6 md:justify-start md:space-x-10">
           <div className="lg:w-0 lg:flex-1">
             <Link href="/">
               <a className="flex items-center">
-                <div className="text-black px-2 genemator-title">Gendy's</div>
+                <div className="text-black dark:text-white px-2 genemator-title">
+                  Gendy's
+                </div>
                 {subtitle && (
-                  <div className="text-black">
+                  <div className="text-black dark:text-white">
                     {">"} {subtitle}
                   </div>
                 )}
@@ -65,8 +78,51 @@ const Header = ({ subtitle, docsUrl }) => {
           <div className="-mr-2 -my-2 md:hidden">
             <button
               type="button"
+              onClick={switchTheme}
+              className="inline-flex items-center justify-center p-2 rounded-md text-black dark:text-white hover:text-white hover:bg-black dark:hover:text-black dark:hover:bg-white focus:outline-none focus:bg-black focus:text-gray-500 dark:focus:bg-white dark:focus:text-gray-300 transition duration-150 ease-in-out mr-3"
+            >
+              {(() => {
+                if (theme === "light") {
+                  return (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                      />
+                    </svg>
+                  );
+                } else {
+                  return (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                      />
+                    </svg>
+                  );
+                }
+              })()}
+            </button>
+            <button
+              type="button"
               onClick={() => setMenuOpen(true)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-black hover:text-white hover:bg-black focus:outline-none focus:bg-black focus:text-gray-500 transition duration-150 ease-in-out"
+              className="inline-flex items-center justify-center p-2 rounded-md text-black dark:text-white hover:text-white hover:bg-black dark:hover:text-black dark:hover:bg-white focus:outline-none focus:bg-black focus:text-gray-500 dark:focus:bg-white dark:focus:text-gray-300 transition duration-150 ease-in-out"
             >
               <svg
                 className="h-6 w-6"
@@ -86,7 +142,7 @@ const Header = ({ subtitle, docsUrl }) => {
           <nav className="hidden md:flex space-x-10">
             {homeDetectMenu()}
             <Link href="/posts">
-              <a className="text-base leading-6 font-medium text-black hover:text-gray-700 focus:outline-none focus:text-gray-400 transition ease-in-out duration-150">
+              <a className="text-base leading-6 font-medium text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-200 focus:outline-none focus:text-gray-400 dark:focus:text-gray-500 transition ease-in-out duration-150">
                 Posts
               </a>
             </Link>
@@ -95,7 +151,7 @@ const Header = ({ subtitle, docsUrl }) => {
             <a
               href={documentation}
               target="_blank"
-              className="whitespace-no-wrap text-base leading-6 font-medium genemator-title text-black hover:text-gray-700 focus:outline-none focus:text-gray-400"
+              className="whitespace-no-wrap text-base leading-6 font-medium genemator-title text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-200 focus:outline-none focus:text-gray-400 dark:focus:text-gray-500"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -112,6 +168,48 @@ const Header = ({ subtitle, docsUrl }) => {
                 />
               </svg>
             </a>
+            <a
+              onClick={switchTheme}
+              className="whitespace-no-wrap text-base leading-6 font-medium genemator-title text-black dark:text-white hover:text-gray-700 dark:text-gray-200 focus:outline-none focus:text-gray-400 dark:focus:text-gray-600 select-none"
+            >
+              {(() => {
+                if (theme === "light") {
+                  return (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                      />
+                    </svg>
+                  );
+                } else {
+                  return (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                      />
+                    </svg>
+                  );
+                }
+              })()}
+            </a>
           </div>
         </div>
       </div>
@@ -126,13 +224,15 @@ const Header = ({ subtitle, docsUrl }) => {
       >
         <div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
           <div className="rounded-lg shadow-lg">
-            <div className="rounded-lg border shadow-xs bg-white">
+            <div className="rounded-lg border shadow-xs bg-white dark:bg-black">
               <div className="pt-5 pb-6 px-5 space-y-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <div className="text-black genemator-title">Gendy's</div>{" "}
+                    <div className="text-black dark:text-white genemator-title">
+                      Gendy's
+                    </div>{" "}
                     {subtitle && (
-                      <div className="text-black">
+                      <div className="text-black dark:text-white">
                         {">"} {subtitle}
                       </div>
                     )}
@@ -141,7 +241,7 @@ const Header = ({ subtitle, docsUrl }) => {
                     <button
                       type="button"
                       onClick={() => setMenuOpen(false)}
-                      className="inline-flex items-center justify-center p-2 rounded-md text-black hover:text-white hover:bg-black focus:outline-none focus:bg-white focus:text-black transition duration-150 ease-in-out"
+                      className="inline-flex items-center justify-center p-2 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-white focus:outline-none focus:bg-white dark:focus:bg-black focus:text-black dark:focus:text-white transition duration-150 ease-in-out"
                     >
                       <svg
                         className="h-6 w-6"
@@ -163,7 +263,7 @@ const Header = ({ subtitle, docsUrl }) => {
                   <nav className="grid row-gap-8">
                     {homeDetectResponsive()}
                     <Link href="/posts">
-                      <a className="-m-3 mt-3 p-3 flex items-center space-x-3 rounded-md text-black hover:bg-black hover:text-white transition ease-in-out duration-150">
+                      <a className="-m-3 mt-3 p-3 flex items-center space-x-3 rounded-md text-black dark:text-white hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition ease-in-out duration-150">
                         <svg
                           className="flex-shrink-0 h-6 w-6"
                           fill="none"
@@ -189,16 +289,16 @@ const Header = ({ subtitle, docsUrl }) => {
                 <div className="space-y-6">
                   <a
                     href="https://doc.genemator.me"
-                    className="w-full flex items-center justify-center px-4 py-2 border border text-base leading-6 font-medium rounded-md text-black genemator-title bg-transparent hover:bg-black hover:text-white focus:outline-none focus:border-white focus:shadow-outline-white active:bg-white transition ease-in-out duration-150"
+                    className="w-full flex items-center justify-center px-4 py-2 border border text-base leading-6 font-medium rounded-md text-black dark:text-white genemator-title bg-transparent hover:bg-black dark:hover:bg-white hover:text-white hover:text-black focus:outline-none focus:border-white dark:focus:border-black focus:shadow-outline-white active:bg-white dark:active:bg-black transition ease-in-out duration-150"
                   >
                     @Gendy Docs
                   </a>
                   <span className="w-full flex rounded-md shadow-sm" />
-                  <p className="text-center text-base leading-6 font-medium text-black">
+                  <p className="text-center text-base leading-6 font-medium text-black dark:text-white">
                     Proudly crafted by{" "}
                     <a
                       href="https://genemator.me"
-                      className="text-gray-700 hover:text-gray-500 transition ease-in-out duration-150"
+                      className="text-gray-700 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-400 transition ease-in-out duration-150"
                     >
                       00010023 a.k.a Genemator
                     </a>
