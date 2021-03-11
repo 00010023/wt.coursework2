@@ -1,3 +1,21 @@
+:root {
+  --markdown: #242424;
+  --markdown-hr-border-bottom: #333435;
+  --markdown-kbd-background-color: #101010;
+  --markdown-kbd-border: #262628;
+  --markdown-kbd-box-shadow: #37393b;
+  --markdown-hr-border-bottom-color: #1a1a1a;
+}
+
+[data-theme="dark"] {
+  --markdown: #dbdbdb;
+  --markdown-hr-border-bottom: #d4d7db;
+  --markdown-kbd-background-color: #f1f1f1;
+  --markdown-kbd-border: #d5d5de;
+  --markdown-kbd-box-shadow: #c7d0d6;
+  --markdown-hr-border-bottom-color: #e9e9e9;
+}
+
 .markdown .octicon {
   display: inline-block;
   fill: currentColor;
@@ -60,7 +78,7 @@
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   line-height: 1.5;
-  color: #242424;
+  color: var(--markdown);
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
     sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 16px;
@@ -166,7 +184,7 @@ object {
   overflow: hidden;
   background: transparent;
   border: 0;
-  border-bottom: 1px solid #333435;
+  border-bottom: 1px solid var(--markdown-hr-border-bottom);
 }
 
 .markdown hr:after,
@@ -200,10 +218,10 @@ object {
   line-height: 10px;
   color: #1e2226;
   vertical-align: middle;
-  background-color: #101010;
-  border: 1px solid #262628;
+  background-color: var(--markdown-kbd-background-color);
+  border: 1px solid var(--markdown-kbd-border);
   border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #37393b;
+  box-shadow: inset 0 -1px 0 var(--markdown-kbd-box-shadow);
 }
 
 .markdown h1,
@@ -314,7 +332,7 @@ object {
 }
 
 .markdown hr {
-  border-bottom-color: #1a1a1a;
+  border-bottom-color: var(--markdown-hr-border-bottom-color);
 }
 
 .markdown kbd {

@@ -56,16 +56,18 @@ const NewsPostPage = ({ post, server, documentation }) => {
       <Notification news="This blog app is dedicated to fulfill WIUT's requirements" />
       <div className="max-w-screen-md mx-auto px-4 sm:px-6 md:px-8 py-8 mb-16">
         <Link href="/posts">
-          <a className="link">&lt;- Back to overview</a>
+          <a className="link dark:text-white">&lt;- Back to overview</a>
         </Link>
 
-        <h1 className="tracking-tight font-bold text-5xl leading-10 mt-4 py-8">
+        <h1 className="tracking-tight font-bold dark:text-white text-5xl leading-10 mt-4 py-8">
           {post.title}
         </h1>
-        <p className="text-gray-600 mt-3 leading-tight">
+        <p className="text-gray-600 dark:text-gray-300 mt-3 leading-tight">
           {format.format(date)}
         </p>
-        <p className="text-gray-600 mt-3 leading-tight">{post.author}</p>
+        <p className="text-gray-600 dark:text-gray-300 mt-3 leading-tight">
+          {post.author}
+        </p>
         <div className="mt-8">
           <Markdown
             source={post.content}
@@ -78,19 +80,19 @@ const NewsPostPage = ({ post, server, documentation }) => {
           <div className="grid lg:grid-cols-3 lg:col-gap-5 lg:row-gap-12">
             <Link href={"/edit/[post]"} as={"/edit/" + post._id}>
               <a>
-                <div className="mt-4 py-2 mx-1 px-2 border rounded bg-white text-black hover:text-white hover:bg-black active:bg-gray-700 select-none">
+                <div className="mt-4 py-2 mx-1 px-2 border rounded bg-white dark:bg-black text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-white active:bg-gray-700 dark:active:bg-gray-200 select-none">
                   Edit the post
                 </div>
               </a>
             </Link>
             <a onClick={deletePost}>
-              <div className="mt-4 py-2 mx-1 px-2 border rounded bg-white text-black hover:text-white hover:bg-red-700 active:bg-red-400 select-none">
+              <div className="mt-4 py-2 mx-1 px-2 border rounded bg-white dark:bg-black text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-white active:bg-gray-700 dark:active:bg-gray-200 select-none">
                 {deleteText}
               </div>
             </a>
             <Link href="/new">
               <a>
-                <div className="mt-4 py-2 mx-1 px-2 border rounded bg-white text-black hover:text-white hover:bg-green-700 active:bg-green-400 select-none">
+                <div className="mt-4 py-2 mx-1 px-2 border rounded bg-white dark:bg-black text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-white active:bg-gray-700 dark:active:bg-gray-200 select-none">
                   Create another
                 </div>
               </a>

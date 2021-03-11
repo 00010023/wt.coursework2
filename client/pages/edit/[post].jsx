@@ -110,15 +110,15 @@ const NewsPostPage = ({ post, server, documentation }) => {
       <Notification news="This blog app is dedicated to fulfill WIUT's requirements" />
       <div className="max-w-screen-md mx-auto px-4 sm:px-6 md:px-8 py-8 mb-16">
         <Link href="/posts">
-          <a className="link">&lt;- Back to overview</a>
+          <a className="link dark:text-white">&lt;- Back to overview</a>
         </Link>
         <div className="max-w-screen-lg mx-auto px-4 sm:px-6 md:px-8 mt-8">
-          <label htmlFor="query" className="font-medium">
+          <label htmlFor="query" className="font-medium dark:text-white">
             Title {post.title}
           </label>
           <input
             id="title"
-            className="block w-full px-4 py-2 leading-normal bg-white border border-gray-200 rounded-lg outline-none shadow hover:shadow-sm focus:shadow-sm appearance-none focus:border-gray-300 hover:border-gray-300"
+            className="block w-full px-4 py-2 leading-normal dark:text-white bg-white dark:bg-black border border-gray-200 dark:border-gray-700 rounded-lg outline-none shadow hover:shadow-sm focus:shadow-sm appearance-none focus:border-gray-300 dark:focus:border-gray-600 hover:border-gray-300 dark:hover:border-gray-600"
             type="text"
             placeholder={"Type a title..."}
             value={postTitle}
@@ -126,12 +126,12 @@ const NewsPostPage = ({ post, server, documentation }) => {
           />
         </div>
         <div className="max-w-screen-lg mx-auto px-4 sm:px-6 md:px-8 mt-8">
-          <label htmlFor="query" className="font-medium">
+          <label htmlFor="query" className="font-medium dark:text-white">
             Description
           </label>
           <input
             id="desc"
-            className="block w-full px-4 py-2 leading-normal bg-white border border-gray-200 rounded-lg outline-none shadow hover:shadow-sm focus:shadow-sm appearance-none focus:border-gray-300 hover:border-gray-300"
+            className="block w-full px-4 py-2 leading-normal dark:text-white bg-white dark:bg-black border border-gray-200 dark:border-gray-700 rounded-lg outline-none shadow hover:shadow-sm focus:shadow-sm appearance-none focus:border-gray-300 dark:focus:border-gray-600 hover:border-gray-300 dark:hover:border-gray-600"
             type="text"
             placeholder={"Type some description..."}
             value={postDescription}
@@ -139,12 +139,12 @@ const NewsPostPage = ({ post, server, documentation }) => {
           />
         </div>
         <div className="max-w-screen-lg mx-auto px-4 sm:px-6 md:px-8 mt-8">
-          <label htmlFor="query" className="font-medium">
+          <label htmlFor="query" className="font-medium dark:text-white">
             Author
           </label>
           <input
             id="auth"
-            className="block w-full px-4 py-2 leading-normal bg-white border border-gray-200 rounded-lg outline-none shadow hover:shadow-sm focus:shadow-sm appearance-none focus:border-gray-300 hover:border-gray-300"
+            className="block w-full px-4 py-2 leading-normal dark:text-white bg-white dark:bg-black border border-gray-200 dark:border-gray-700 rounded-lg outline-none shadow hover:shadow-sm focus:shadow-sm appearance-none focus:border-gray-300 dark:focus:border-gray-600 hover:border-gray-300 dark:hover:border-gray-600"
             type="text"
             placeholder={"Type the author..."}
             value={postAuthor}
@@ -152,12 +152,12 @@ const NewsPostPage = ({ post, server, documentation }) => {
           />
         </div>
         <div className="max-w-screen-lg mx-auto px-4 sm:px-6 md:px-8 mt-8">
-          <label htmlFor="query" className="font-medium">
+          <label htmlFor="query" className="font-medium dark:text-white">
             Content
           </label>
           <textarea
             id="content"
-            className="block w-full h-80 px-4 bg-white border border-gray-200 rounded-lg outline-none shadow hover:shadow-sm focus:shadow-sm appearance-none focus:border-gray-300 hover:border-gray-300 resize-y"
+            className="block w-full px-4 py-2 leading-normal dark:text-white bg-white dark:bg-black border border-gray-200 dark:border-gray-700 rounded-lg outline-none shadow hover:shadow-sm focus:shadow-sm appearance-none focus:border-gray-300 dark:focus:border-gray-600 hover:border-gray-300 dark:hover:border-gray-600"
             placeholder={"Type your content... (Markdown)"}
             value={postText}
             onChange={(e) => setPostText(e.target.value)}
@@ -167,17 +167,17 @@ const NewsPostPage = ({ post, server, documentation }) => {
           <div className="items-center justify-center text-center">
             <div className="grid lg:grid-cols-3 lg:col-gap-5 lg:row-gap-12">
               <a onClick={editPost}>
-                <div className="mt-4 py-2 mx-5 px-2 border rounded bg-white text-black hover:text-white hover:bg-black active:bg-gray-700 select-none">
+                <div className="mt-4 py-2 mx-5 px-2 border rounded bg-white dark:bg-black text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-white active:bg-gray-700 dark:active:bg-gray-200 select-none">
                   {editText}
                 </div>
               </a>
               <a onClick={preview}>
-                <div className="mt-4 py-2 mx-5 px-2 border rounded bg-white text-black hover:text-white hover:bg-black active:bg-gray-700 select-none">
+                <div className="mt-4 py-2 mx-5 px-2 border rounded bg-white dark:bg-black text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-white active:bg-gray-700 dark:active:bg-gray-200 select-none">
                   Preview the post
                 </div>
               </a>
               <a onClick={deletePost}>
-                <div className="mt-4 py-2 mx-5 px-2 border rounded bg-white text-black hover:text-white hover:bg-red-700 active:bg-red-400 select-none">
+                <div className="mt-4 py-2 mx-5 px-2 border rounded bg-white dark:bg-black text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-white active:bg-gray-700 dark:active:bg-gray-200 select-none">
                   {deleteText}
                 </div>
               </a>
@@ -185,7 +185,7 @@ const NewsPostPage = ({ post, server, documentation }) => {
           </div>
         </div>
         <div className="max-w-screen-lg mx-auto px-4 sm:px-6 md:px-8 mt-8">
-          <div className="block w-full px-4 py-2 leading-normal bg-white border border-gray-200 rounded-lg outline-none">
+          <div className="block w-full px-4 py-2 leading-normal bg-white dark:bg-black border border-gray-200 dark:border-gray-600 rounded-lg outline-none">
             <Markdown
               source={previewC}
               displayURL={previewC}

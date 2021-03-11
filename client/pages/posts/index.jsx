@@ -22,12 +22,12 @@ const PostsIndexPage = ({ posts, documentation }) => {
       <Notification news="This blog app is dedicated to fulfill WIUT's requirements" />
       <div className="pt-8 pb-20 px-4 sm:px-6 lg:pt-8 lg:pb-28 lg:px-8">
         <div className="max-w-screen-lg mx-auto">
-          <div className="border-b-2 border-gray-800 pb-10">
-            <h2 className="text-4xl font-bold tracking-tight">
+          <div className="border-b-2 border-gray-800 dark:border-gray-50 pb-10">
+            <h2 className="text-4xl dark:text-white font-bold tracking-tight">
               Posts {"<|>"} News
             </h2>
             <div className="mt-3 sm:mt-4">
-              <p className="text-xl leading-7 text-black">
+              <p className="text-xl leading-7 text-black dark:text-white">
                 Get more information or read about Genemator's thoughts in this
                 page!
               </p>
@@ -43,15 +43,15 @@ const PostsIndexPage = ({ posts, documentation }) => {
               });
               return (
                 <div key={post._id}>
-                  <p className="text-sm leading-5 text-gray-700">
+                  <p className="text-sm leading-5 text-gray-700 dark:text-gray-200">
                     <time dateTime={post.createdAt}>{format.format(date)}</time>
                   </p>
                   <Link href={"/posts/[post]"} as={`/posts/${post._id}`}>
                     <a className="block">
-                      <h3 className="mt-2 text-xl leading-7 font-semibold text-black">
+                      <h3 className="mt-2 text-xl leading-7 font-semibold text-black dark:text-white">
                         {post.title}
                       </h3>
-                      <p className="mt-3 text-base leading-6 text-gray-600">
+                      <p className="mt-3 text-base leading-6 text-gray-600 dark:text-gray-300">
                         {post.snippet}
                       </p>
                     </a>
@@ -70,7 +70,7 @@ const PostsIndexPage = ({ posts, documentation }) => {
           <div className="items-end justify-end text-center">
             <Link href="/new">
               <a>
-                <div className="mt-4 py-2 mx-1 px-2 border rounded bg-white text-black hover:text-white hover:bg-black active:bg-gray-700 select-none">
+                <div className="mt-4 py-2 mx-1 px-2 border rounded bg-white dark:bg-black text-black dark:text-white hover:text-white dark:text-black hover:bg-black dark:bg-white active:bg-gray-700 dark:bg-gray-100 select-none">
                   Create yours
                 </div>
               </a>
