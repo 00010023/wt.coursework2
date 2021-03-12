@@ -37,5 +37,5 @@ cleaner() {
   cd ./docs && docs && cd .. || echo "Are you sure that documentation does exist?"
 }
 
-cleaner
+cd .. && cleaner
 exit 0

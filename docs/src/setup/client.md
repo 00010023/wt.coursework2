@@ -40,7 +40,18 @@ Yay, now we have the source codes stored in our PC. Now, open my project through
 terminal.
 
 ```shell
-cd 00010023
+cd 00010023\client
+```
+
+Now, we have to make sure that all dependencies are installed and ready to be
+launched!?
+
+```shell
+# If you have yarn, use it dude
+yarn install
+
+# If you're fan of npm, feel free...
+npm install
 ```
 
 ### UNIX Typo / GNU Linux users
@@ -90,6 +101,9 @@ I've already wrote a few shell scripts that will ease our next procedures, so
 all you have to do is run:
 
 ```shell
+# Let's install dependencies for all projects at once, if you did it earlier, skip it!
+./install.sh # calling it from root path of the project
+
 # If you have npm
 npm run client
 

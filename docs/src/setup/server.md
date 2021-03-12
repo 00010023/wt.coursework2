@@ -42,6 +42,17 @@ terminal.
 cd 00010023
 ```
 
+Now, we have to make sure that all dependencies are installed and ready to be
+launched!?
+
+```shell
+# If you have yarn, use it dude
+yarn install
+
+# If you're fan of npm, feel free...
+npm install
+```
+
 ### UNIX Typo / GNU Linux users
 
 Hola my Amigos! Dear UNIX|Linux users, my friends, I've already prepared
@@ -89,13 +100,16 @@ I've already wrote a few shell scripts that will ease our next procedures, so
 all you have to do is run:
 
 ```shell
+# Let's install dependencies for all projects at once, if you did it earlier, skip it!
+./install.sh # calling it from root path of the project
+
 # If you have npm
-npm run client
+npm run server
 
 # If you have yarn
-yarn client
+yarn server
 ```
 
-It will start the client side of application in a matter of time. Head to the
-[http://localhost:3000](http://localhost:3000) on your borwser to checkout the
-result.
+It will start the server side of application in a matter of time. Head to the
+[http://localhost:3001/api/v1/posts](http://localhost:3000/api/v1/posts) on your
+borwser to checkout the result.
