@@ -1,6 +1,6 @@
 # Client side
 
-## Which framework does stands for my coursework?
+## Which framework does stands for front-end?
 
 Actually, for the client side of the application, I used a framework namely
 Next.js which is way more convenient compared to another frameworks. I could do
@@ -96,3 +96,7 @@ npm run client
 # If you have yarn
 yarn client
 ```
+
+It will start the client side of application in a matter of time. Head to the
+[http://localhost:3000](http://localhost:3000) on your borwser to checkout the
+result.
