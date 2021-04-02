@@ -18,7 +18,7 @@ module.exports = {
       defaultDarkTheme: true,
       disableThemeIgnore: true,
     },
-    logo: "https://genemator.me/favicon.png",
+    logo: "https://genemator.uz/favicon.png",
     searchPlaceholder: "Search...",
     smoothScroll: true,
     repo: homepage,
@@ -66,12 +66,12 @@ module.exports = {
             items: [
               {
                 text: "Client",
-                link: "https://wt.genemator.me",
+                link: "https://wt.genemator.uz",
                 target: "_blank",
               },
               {
                 text: "Server",
-                link: "https://srv.genemator.me" + "/api/v1/posts",
+                link: "https://srv.genemator.uz" + "/api/v1/posts",
                 target: "_blank",
               },
             ],

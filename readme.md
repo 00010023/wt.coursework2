@@ -2,7 +2,7 @@
     <h1 align="center">Welcome to my coursework ladies and gentlemen! 🤵🏻‍♂️</h1>
 </p>
 
-<a href="https://doc.genemator.me">
+<a href="https://doc.genemator.uz">
     <img src="./assets/preview.png" width="100%" alt="Doc Station Banner">
 </a>
 
@@ -26,7 +26,7 @@ students.
 
 ### For cloud solutions ☁️
 
-- Open the website [https://doc.genemator.me](https://doc.genemator.me)
+- Open the website [https://doc.genemator.uz](https://doc.genemator.uz)
 
 ### For local instances 💻
 

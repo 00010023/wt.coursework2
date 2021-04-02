@@ -27,7 +27,7 @@ class MyApp extends App {
         <Head>
           <meta
             property="og:image"
-            content="https://genemator.me/preview.png"
+            content="https://genemator.uz/preview.png"
           />
           <meta property="og:site_name" content="Serverland" />
           <title>Gendy's Portfolio Website</title>

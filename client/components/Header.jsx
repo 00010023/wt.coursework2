@@ -240,7 +240,7 @@ const Header = ({ subtitle, docsUrl }) => {
               <div className="py-6 px-5 space-y-6">
                 <div className="space-y-6">
                   <a
-                    href="https://doc.genemator.me"
+                    href="https://doc.genemator.uz"
                     className="w-full flex items-center justify-center px-4 py-2 border border text-base leading-6 font-medium rounded-md text-black dark:text-white genemator-title bg-transparent hover:bg-black dark:hover:bg-white hover:text-white hover:text-black focus:outline-none focus:border-white dark:focus:border-black focus:shadow-outline-white active:bg-white dark:active:bg-black transition ease-in-out duration-150"
                   >
                     @Gendy Docs
@@ -249,7 +249,7 @@ const Header = ({ subtitle, docsUrl }) => {
                   <p className="text-center text-base leading-6 font-medium text-black dark:text-white">
                     Proudly crafted by{" "}
                     <a
-                      href="https://genemator.me"
+                      href="https://genemator.uz"
                       className="text-gray-700 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-400 transition ease-in-out duration-150"
                     >
                       00010023 a.k.a Genemator

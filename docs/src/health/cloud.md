@@ -8,11 +8,11 @@
 
 ### Client side health
 
-<Health host="https://wt.genemator.me"></Health>
+<Health host="https://wt.genemator.uz"></Health>
 
 ### Server side health
 
-<Health host="https://srv.genemator.me/api/v1/posts"></Health>
+<Health host="https://srv.genemator.uz/api/v1/posts"></Health>
 
 <hr/>
 

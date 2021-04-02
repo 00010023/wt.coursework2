@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: https://genemator.me/big_logo.png
+heroImage: https://genemator.uz/big_logo.png
 tagline: The documentation of a coursework that targets to get 100%
 actionText: Get Started →
 actionLink: /about/
